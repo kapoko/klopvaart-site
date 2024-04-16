@@ -1,0 +1,26 @@
+{
+  "name": "@kapoko/klopvaart-theme",
+  "type": "module",
+  "scripts": {
+    "build:wp": "wp-scripts build",
+    "start:wp": "wp-scripts start --hot",
+    "build:assets": "vite build",
+    "start:assets": "vite",
+    "start": "concurrently \"npm:start:*\"",
+    "build": "concurrently \"npm:build:*\""
+  },
+  "devDependencies": {
+    "@roots/wordpress-hmr": "^6.20.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "@vitejs/plugin-legacy": "^5.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@wordpress/blocks": "^12.27.1",
+    "@wordpress/plugins": "^6.18.0",
+    "@wordpress/scripts": "^27.1.0",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.12"
+  }
+}

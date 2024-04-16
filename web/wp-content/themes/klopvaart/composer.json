@@ -1,0 +1,19 @@
+{
+  "name": "kapoko/klopvaart-theme",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "kapoko",
+      "email": "17455539+kapoko@users.noreply.github.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "symfony/asset": "^6.3",
+    "symfony/dependency-injection": "^6.3"
+  }
+}

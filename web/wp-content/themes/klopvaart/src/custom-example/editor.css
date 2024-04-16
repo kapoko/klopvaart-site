@@ -1,0 +1,7 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+.wp-block-klopvaart-blocks-example-01-basic-esnext-custom {
+  border: 10px darkorange dashed;
+}
