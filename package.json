@@ -1,0 +1,29 @@
+{
+  "name": "@kapoko/klopvaart-site",
+  "workspaces": [
+    "web/wp-content/themes/klopvaart"
+  ],
+  "scripts": {
+    "start": "npm start --ws",
+    "build": "npm run build --ws"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.22.2",
+    "prettier": "^3.2.5"
+  },
+  "prettier": {
+    "plugins": [
+      "@prettier/plugin-php"
+    ],
+    "overrides": [
+      {
+        "files": "*.php",
+        "options": {
+          "tabWidth": 4,
+          "braceStyle": "per-cs",
+          "printWidth": 120
+        }
+      }
+    ]
+  }
+}

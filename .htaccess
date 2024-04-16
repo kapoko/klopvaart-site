@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Disable index view
+options -Indexes
+
+<FilesMatch "^(.env|.env.local.php)$">
+  order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Rewrite everything to web/ subfolder
+RewriteCond %{REQUEST_URI} !/web/ [NC]
+RewriteRule ^(.*)$ web/$1 [L]

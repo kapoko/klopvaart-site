@@ -1,0 +1,30 @@
+html,
+body {
+  background: #fff2d7;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+main.content {
+  position: relative;
+  width: 1080px;
+  margin: 0 auto 0 auto;
+  padding: 1.5rem;
+}
+
+div.circle {
+  position: absolute;
+  mix-blend-mode: exclusion;
+  top: 500px;
+  left: 400px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: #ca0000;
+}
+
+p {
+  position: relative;
+  z-index: 1;
+}

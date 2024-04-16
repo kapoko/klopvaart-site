@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.local.php
+/vendor
+/database
+/web/wp
+/web/wp-content/*
+!/web/wp-content/themes
+/web/wp-content/themes/*
+!/web/wp-content/themes/klopvaart
+!/web/wp-content/mu-plugins
+node_modules/

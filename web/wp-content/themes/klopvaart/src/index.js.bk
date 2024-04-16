@@ -1,0 +1,6 @@
+import roots from "@roots/wordpress-hmr";
+import "./custom-example";
+
+roots.register.blocks("./custom-example");
+
+console.log("hi from block js");
