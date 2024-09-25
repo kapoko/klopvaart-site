@@ -9,5 +9,8 @@ options -Indexes
 </FilesMatch>
 
 # Rewrite everything to web/ subfolder
-RewriteCond %{REQUEST_URI} !/web/ [NC]
-RewriteRule ^(.*)$ web/$1 [L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^web/(.*)$ /$1 [L,R=301]
+
+RewriteCond %{REQUEST_URI} !^/web [NC]
+RewriteRule ^(.*)$ /web/$1 [L]
