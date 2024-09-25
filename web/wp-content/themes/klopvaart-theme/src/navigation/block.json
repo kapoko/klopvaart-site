@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "klopvaart/navigation",
+  "title": "Klopvaart Navigation",
+  "textdomain": "klopvaart",
+  "category": "klopvaart",
+  "allowedBlocks": ["core/navigation"],
+  "supports": {
+    "interactivity": true
+  },
+  "editorScript": "file:index.js",
+  "style": "file:style-index.css",
+  "render": "file:render.php",
+  "viewScriptModule": "file:view.js"
+}

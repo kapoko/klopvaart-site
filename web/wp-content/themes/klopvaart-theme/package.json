@@ -2,16 +2,19 @@
   "name": "@kapoko/klopvaart-theme",
   "type": "module",
   "scripts": {
-    "build:wp": "wp-scripts build",
-    "start:wp": "wp-scripts start --hot",
-    "build:assets": "vite build",
-    "start:assets": "vite",
+    "build:wp-scripts": "wp-scripts build --experimental-modules",
+    "start:wp-scripts": "wp-scripts start --experimental-modules",
+    "build:vite": "vite build",
+    "start:vite": "vite",
     "start": "concurrently \"npm:start:*\"",
     "build": "concurrently \"npm:build:*\""
   },
   "devDependencies": {
     "@roots/wordpress-hmr": "^6.23.3",
     "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^22.7.4",
+    "@types/webpack": "^5.28.5",
+    "@types/wordpress__block-editor": "^11.5.15",
     "@vitejs/plugin-legacy": "^5.4.2",
     "@vitejs/plugin-react": "^4.3.1",
     "@wordpress/blocks": "^13.8.0",
@@ -22,5 +25,9 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
     "vite": "^5.4.7"
+  },
+  "dependencies": {
+    "@wordpress/interactivity": "^6.8.2",
+    "delicious-hamburgers": "^1.2.3"
   }
 }

@@ -18,6 +18,7 @@
  *
  * @package WordPress
  */
+
 use Symfony\Component\Dotenv\Dotenv;
 
 if (!file_exists($composer = dirname(__DIR__) . "/vendor/autoload.php")) {
