@@ -4,9 +4,6 @@ namespace App;
 
 use Exception;
 
-const VITE_HOST_PUBLIC = "http://localhost:5173";
-const VITE_HOST_INTERNAL = "http://host.docker.internal:5173";
-
 class Vite
 {
     private static bool $running;
@@ -20,12 +17,13 @@ class Vite
             return self::$running;
         }
 
+        // Never run tests in prod
         if ($_ENV["APP_ENV"] !== "dev") {
             return self::$running = false;
         }
 
-        // Quick test to see if vite server is up, will only run on dev
-        $ch = curl_init(VITE_HOST_INTERNAL . "/" . $testAsset);
+        // Quick test to see if vite server is up
+        $ch = curl_init($_ENV["VITE_HOST_INTERNAL"] . "/" . $testAsset);
         curl_setopt($ch, CURLOPT_NOBODY, true);
         curl_exec($ch);
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
@@ -44,7 +42,7 @@ class Vite
     public static function asset(string $entry): string
     {
         if (self::isRunning($entry)) {
-            return VITE_HOST_PUBLIC . "/" . $entry;
+            return $_ENV["VITE_HOST_PUBLIC"] . "/" . $entry;
         }
 
         try {
@@ -66,10 +64,6 @@ class Vite
         wp_enqueue_script("klopvaart/$handle", Vite::asset($entry), [], null);
 
         if (!self::$running) {
-            // if (!wp_script_is("klopvaart/polyfill")) {
-            //     wp_enqueue_script("klopvaart/polyfill", Vite::asset("vite/legacy-polyfills-legacy"), [], null);
-            // }
-
             wp_enqueue_script(
                 "klopvaart/$handle/legacy",
                 Vite::asset("assets/js/$handle-legacy.$extension"),
@@ -96,8 +90,7 @@ class Vite
     window.__vite_plugin_react_preamble_installed__ = true
 </script>
 EOT;
-
-                printf($script, VITE_HOST_PUBLIC);
+                printf($script, $_ENV["VITE_HOST_PUBLIC"]);
             },
             8
         );

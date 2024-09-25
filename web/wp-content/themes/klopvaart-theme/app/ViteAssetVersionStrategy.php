@@ -1,9 +1,9 @@
 <?php
+
 // Inspired by https://github.com/lhapaipai/vite-bundle/blob/4510dab0b8d9d4c6ff410468d76c00449046fdc4/src/Asset/ViteAssetVersionStrategy.php
 
 namespace App;
 
-use Exception;
 use JsonException;
 use Symfony\Component\Asset\Exception\AssetNotFoundException;
 use Symfony\Component\Asset\Exception\RuntimeException;
@@ -17,8 +17,10 @@ class ViteAssetVersionStrategy implements VersionStrategyInterface
      * @param string $manifestPath Absolute path to the entrypoints file
      * @param bool   $strictMode      Throws an exception for unknown paths
      */
-    public function __construct(private string $manifestPath, private bool $strictMode = true)
-    {
+    public function __construct(
+        private string $manifestPath,
+        private bool $strictMode = true,
+    ) {
     }
 
     /**
@@ -46,25 +48,50 @@ class ViteAssetVersionStrategy implements VersionStrategyInterface
             return $this->assets[$path]["file"];
         }
 
+        if (substr($path, -4) === ".css") {
+            $jsAsset = str_replace(".css", ".js", $path);
+            if (isset($this->assets[$jsAsset]["css"])) {
+                $cssAssets = $this->assets[$jsAsset]["css"];
+
+                if (count($cssAssets) > 1) {
+                    // Could make this more flexible, for now return an error
+                    throw new RuntimeException("More than one css asset in js file");
+                }
+
+                return $cssAssets[0];
+            }
+        }
+
         if ($this->strictMode) {
             throw new AssetNotFoundException(
-                sprintf('assets "%s" not found in entrypoints file "%s".', $path, $this->manifestPath)
+                sprintf(
+                    'Asset "%s" not found in entrypoints file "%s".',
+                    $path,
+                    $this->manifestPath,
+                ),
             );
         }
 
         return null;
     }
 
-    private function loadManifest()
+    private function loadManifest(): void
     {
         if (!is_file($this->manifestPath)) {
             throw new RuntimeException("Manifest does not exist.");
         }
 
         try {
-            $this->assets = json_decode(file_get_contents($this->manifestPath), true, 512, \JSON_THROW_ON_ERROR);
+            $this->assets = json_decode(
+                file_get_contents($this->manifestPath),
+                true,
+                512,
+                \JSON_THROW_ON_ERROR,
+            );
         } catch (JsonException $e) {
-            throw new RuntimeException("Error parsing JSON from manifest: " . $e->getMessage());
+            throw new RuntimeException(
+                "Error parsing JSON from manifest: " . $e->getMessage(),
+            );
         }
     }
 }
