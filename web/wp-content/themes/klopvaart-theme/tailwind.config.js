@@ -1,8 +1,13 @@
-/** @type {import('tailwindcss').Config} */
 export default {
-    content: ["./**/*.{php,ts,tsx}", "./src/**/*.js"],
-    theme: {
-        extend: {},
-    },
-    plugins: [require("@tailwindcss/typography")],
+  content: [
+    "./src/**/*.{php,ts,tsx,js}",
+    "./patterns/**/*.php",
+    "./parts/**/*.html",
+    "./patterns/**/*.html",
+  ],
+  safelist: ["hidden"],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/typography")],
 };

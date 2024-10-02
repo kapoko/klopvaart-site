@@ -10,6 +10,6 @@ if (! empty($attributes['startingYear']) && ! empty($attributes['showStartingYea
 }
 ?>
 
-<p <?php echo get_block_wrapper_attributes(["class" => "text-6xl"]); ?>>
+<p <?php echo get_block_wrapper_attributes(["class" => "text-6xl text-orange-400"]); ?>>
     © <?php echo esc_html($display_date); ?>
 </p>

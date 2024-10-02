@@ -1,10 +1,10 @@
 {
-  "name": "@kapoko/klopvaart-site",
-  "workspaces": [
-    "web/wp-content/themes/klopvaart-theme"
-  ],
-  "scripts": {
-    "start": "npm start --ws",
-    "build": "npm run build --ws"
-  }
+    "name": "@klopvaart/site",
+    "workspaces": [
+        "web/wp-content/themes/klopvaart-theme"
+    ],
+    "scripts": {
+        "start": "npm start --ws",
+        "build": "npm run build --ws"
+    }
 }

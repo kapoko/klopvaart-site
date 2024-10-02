@@ -1,71 +1,77 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 3,
-  "settings": {
-    "appearanceTools": true,
-    "color": {
-      "background": true,
-      "text": true,
-      "custom": false,
-      "defaultDuotone": false,
-      "defaultGradients": false,
-      "defaultPalette": false,
-      "palette": [
-        {
-          "color": "#FAE6BE",
-          "name": "Base",
-          "slug": "base"
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "spacing": {
+            "blockGap": false
         },
-        {
-          "color": "#000000",
-          "name": "Contrast",
-          "slug": "contrast"
+        "color": {
+            "background": true,
+            "text": true,
+            "custom": false,
+            "defaultDuotone": false,
+            "defaultGradients": false,
+            "defaultPalette": false,
+            "palette": [
+                {
+                    "color": "#FAE6BE",
+                    "name": "Base",
+                    "slug": "base"
+                },
+                {
+                    "color": "#000000",
+                    "name": "Contrast",
+                    "slug": "contrast"
+                },
+                {
+                    "color": "#DC2626",
+                    "name": "Red",
+                    "slug": "red"
+                }
+            ]
         },
-        {
-          "color": "#DC2626",
-          "name": "Red",
-          "slug": "red"
+        "layout": {
+            "contentSize": "940px"
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "name": "Fredoka",
+                    "slug": "fredoka",
+                    "fontFamily": "Fredoka, sans-serif",
+                    "fontFace": [
+                        {
+                            "src": [
+                                "file:./assets/fonts/fredoka/Fredoka-Light.woff2"
+                            ],
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontFamily": "Fredoka"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/fredoka/Fredoka-Medium.woff2"
+                            ],
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontFamily": "Fredoka"
+                        }
+                    ]
+                }
+            ]
         }
-      ]
     },
-    "layout": {
-      "contentSize": "940px"
-    },
-    "typography": {
-      "fontFamilies": [
-        {
-          "name": "Fredoka",
-          "slug": "fredoka",
-          "fontFamily": "Fredoka, sans-serif",
-          "fontFace": [
-            {
-              "src": ["file:./assets/fonts/fredoka/Fredoka-Light.woff2"],
-              "fontWeight": "300",
-              "fontStyle": "normal",
-              "fontFamily": "Fredoka"
-            },
-            {
-              "src": ["file:./assets/fonts/fredoka/Fredoka-Medium.woff2"],
-              "fontWeight": "500",
-              "fontStyle": "normal",
-              "fontFamily": "Fredoka"
-            }
-          ]
+    "styles": {
+        "color": {
+            "background": "var:preset|color|base",
+            "text": "var:preset|color|contrast"
+        },
+        "typography": {
+            "fontFamily": "var:preset|font-family|fredoka",
+            "fontSize": "x-large",
+            "fontStyle": "normal",
+            "fontWeight": "300",
+            "lineHeight": "1.4"
         }
-      ]
     }
-  },
-  "styles": {
-    "color": {
-      "background": "var:preset|color|base",
-      "text": "var:preset|color|contrast"
-    },
-    "typography": {
-      "fontFamily": "var:preset|font-family|fredoka",
-      "fontSize": "x-large",
-      "fontStyle": "normal",
-      "fontWeight": "300",
-      "lineHeight": "1.4"
-    }
-  }
 }
