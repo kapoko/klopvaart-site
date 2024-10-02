@@ -1,17 +1,14 @@
 import { store } from "@wordpress/interactivity";
 
-const navStore = store("navigation", {
-    state: {
-        menuOpen: false,
+type State = {
+  menuOpen: boolean;
+};
+
+const { state } = store("navigation", {
+  state: {} as State,
+  actions: {
+    menuToggle() {
+      state.menuOpen = !state.menuOpen;
     },
-    actions: {
-        menuToggle() {
-            navStore.state.menuOpen = !navStore.state.menuOpen;
-        },
-    },
-    callbacks: {
-        log() {
-            console.log(`menuOpen: ${navStore.state.menuOpen}`);
-        },
-    },
+  },
 });

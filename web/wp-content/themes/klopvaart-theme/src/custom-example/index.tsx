@@ -8,58 +8,60 @@ import metadata from "./block.json";
 import "./style.css";
 
 interface Attr {
-    showStartingYear: boolean;
-    startingYear: string;
+  showStartingYear: boolean;
+  startingYear: string;
 }
 
 registerBlockType<Attr>(metadata.name, {
-    ...metadata,
-    icon: "update",
-    attributes: {
-        showStartingYear: {
-            type: "boolean",
-        },
-        startingYear: {
-            type: "string",
-        },
+  ...metadata,
+  icon: "update",
+  attributes: {
+    showStartingYear: {
+      type: "boolean",
     },
-    example: {},
-    edit: ({ attributes, setAttributes }) => {
-        const currentYear = new Date().getFullYear().toString();
-        const { showStartingYear, startingYear } = attributes;
-
-        let displayDate: string;
-
-        if (showStartingYear && startingYear) {
-            displayDate = `${startingYear} - ${currentYear}`;
-        } else {
-            displayDate = currentYear;
-        }
-
-        return (
-            <>
-                <InspectorControls>
-                    <PanelBody title={__("Settings", "test")}>
-                        <ToggleControl
-                            checked={!!showStartingYear}
-                            label={__("Show starting year", "test")}
-                            onChange={() =>
-                                setAttributes({
-                                    showStartingYear: !showStartingYear,
-                                })
-                            }
-                        />
-                        {showStartingYear && (
-                            <TextControl
-                                label={__("Starting year", "test")}
-                                value={startingYear || ""}
-                                onChange={(value) => setAttributes({ startingYear: value })}
-                            />
-                        )}
-                    </PanelBody>
-                </InspectorControls>
-                <p {...useBlockProps({ className: "text-6xl" })}>© {displayDate}</p>
-            </>
-        );
+    startingYear: {
+      type: "string",
     },
+  },
+  example: {},
+  edit: ({ attributes, setAttributes }) => {
+    const currentYear = new Date().getFullYear().toString();
+    const { showStartingYear, startingYear } = attributes;
+
+    let displayDate: string;
+
+    if (showStartingYear && startingYear) {
+      displayDate = `${startingYear} - ${currentYear}`;
+    } else {
+      displayDate = currentYear;
+    }
+
+    return (
+      <>
+        <InspectorControls>
+          <PanelBody title={__("Settings", "test")}>
+            <ToggleControl
+              checked={!!showStartingYear}
+              label={__("Show starting year", "test")}
+              onChange={() =>
+                setAttributes({
+                  showStartingYear: !showStartingYear,
+                })
+              }
+            />
+            {showStartingYear && (
+              <TextControl
+                label={__("Starting year", "test")}
+                value={startingYear || ""}
+                onChange={(value) => setAttributes({ startingYear: value })}
+              />
+            )}
+          </PanelBody>
+        </InspectorControls>
+        <p {...useBlockProps({ className: "text-6xl text-orange-400" })}>
+          © {displayDate}
+        </p>
+      </>
+    );
+  },
 });
