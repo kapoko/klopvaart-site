@@ -13,10 +13,7 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org",
-      "only": [
-        "wpackagist-plugin/*",
-        "wpackagist-theme/*"
-      ]
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
     },
     {
       "type": "composer",
@@ -24,7 +21,7 @@
     },
     {
       "type": "path",
-      "url": "./web/wp-content/themes/klopvaart-theme",
+      "url": "./packages/theme",
       "options": {
         "symlink": true
       }
@@ -35,21 +32,15 @@
     "composer/installers": "^2.3",
     "kapoko/klopvaart-theme": "@dev",
     "roots/wordpress": "^6.3",
-    "symfony/dotenv": "^6.0",
+    "symfony/dotenv": "^7.1",
     "symfony/flex": "^2.4"
   },
   "extra": {
     "wordpress-install-dir": "web/wp",
     "installer-paths": {
-      "web/wp-content/mu-plugins/{$name}/": [
-        "type:wordpress-muplugin"
-      ],
-      "web/wp-content/plugins/{$name}/": [
-        "type:wordpress-plugin"
-      ],
-      "web/wp-content/themes/{$name}/": [
-        "type:wordpress-theme"
-      ]
+      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
   },
   "config": {

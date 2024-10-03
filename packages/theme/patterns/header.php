@@ -9,6 +9,6 @@
 
 <!-- wp:klopvaart/navigation -->
 <div class="wp-block-klopvaart-navigation">
-    <!-- wp:navigation {"overlayMenu": "never", "style":{"spacing":{"blockGap":"var:preset|spacing|70"}}} /-->
+    <!-- wp:navigation {"overlayMenu": "never", "style":{"spacing":{"blockGap":"var:preset|spacing|60"}}} /-->
 </div>
 <!-- /wp:klopvaart/navigation -->
