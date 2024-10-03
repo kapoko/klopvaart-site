@@ -3,6 +3,7 @@
 /**
  * Loads Knock Knock template files located in the app/ folder
  */
+
 array_map(
     function ($file) {
         $file = "./app/{$file}.php";
@@ -22,22 +23,41 @@ array_map(
 add_action(
     "block_categories_all",
     function ($categories) {
-        return array_merge($categories, [
+        return array_merge(
+            $categories,
+            [
             [
                 "slug" => "klopvaart",
                 "title" => "Klopvaart Blocks",
             ],
-        ]);
+            ]
+        );
     },
     10,
     2
 );
 
-add_action("init", function () {
-    register_block_type(__DIR__ . "/build/custom-example");
-    register_block_type(__DIR__ . "/build/variation");
-    register_block_type(__DIR__ . "/build/navigation");
-});
+/**
+ * Load core block extensions
+ */
+array_map(
+    function ($blockName) {
+        $file = "./src/core/{$blockName}/{$blockName}.php";
+        if (!locate_template($file, true, true)) {
+            wp_die(sprintf(__("Error locating <code>%s</code>.", "klopvaart"), $file));
+        }
+    },
+    ["navigation"]
+);
+
+add_action(
+    "init",
+    function () {
+        register_block_type(__DIR__ . "/build/custom-example");
+        register_block_type(__DIR__ . "/build/variation");
+        register_block_type(__DIR__ . "/build/navigation");
+    }
+);
 
 /**
  * Global functions

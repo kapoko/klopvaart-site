@@ -17,16 +17,16 @@ const TEMPLATE: Template[] = [
       overlayMenu: "never",
       style: {
         spacing: {
-          blockGap: "var:preset|spacing|60",
+          blockGap: "var:preset|spacing|70",
         },
       },
     },
   ],
 ];
 
-const MenuButton = () => {
+const MenuButton = ({ className }) => {
   return (
-    <button className="hamburger hamburger--chop" type="button">
+    <button className={`hamburger hamburger--chop ${className}`} type="button">
       <div className="inner">
         <span className="bar" />
         <span className="bar" />
@@ -42,13 +42,20 @@ registerBlockType(metadata.name, {
   attributes: {},
   edit: () => {
     return (
-      <div {...useBlockProps()}>
-        <MenuButton />
-        <InnerBlocks
-          allowedBlocks={metadata.allowedBlocks}
-          templateLock={"contentOnly"}
-          template={TEMPLATE}
-        />
+      <div
+        {...useBlockProps({
+          className:
+            "max-w-full md:container mx-auto px-4 py-2 md:py-10 justify-end md:justify-start flex items-center",
+        })}
+      >
+        <div className="hidden md:block">
+          <InnerBlocks
+            allowedBlocks={metadata.allowedBlocks}
+            templateLock={"contentOnly"}
+            template={TEMPLATE}
+          />
+        </div>
+        <MenuButton className={"md:hidden"} />
       </div>
     );
   },

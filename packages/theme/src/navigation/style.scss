@@ -1,0 +1,17 @@
+@use "~delicious-hamburgers/scss/base";
+@use "~delicious-hamburgers/scss/animations/chop";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.current-menu-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -0.3em;
+  left: -5%;
+  width: 110%;
+  height: 6px;
+  background: paleturquoise;
+}
