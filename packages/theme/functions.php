@@ -37,6 +37,20 @@ add_action(
     2
 );
 
+add_action(
+    'enqueue_block_editor_assets',
+    function () {
+        $asset_file  = include plugin_dir_path(__FILE__) . 'build/core.asset.php';
+
+        wp_enqueue_script(
+            'core',
+            get_stylesheet_directory_uri() . '/build/core.js',
+            $asset_file['dependencies'],
+            $asset_file['version']
+        );
+    }
+);
+
 /**
  * Load core block extensions
  */

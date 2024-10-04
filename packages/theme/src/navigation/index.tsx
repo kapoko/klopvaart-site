@@ -15,16 +15,11 @@ const TEMPLATE: Template[] = [
     "core/navigation",
     {
       overlayMenu: "never",
-      style: {
-        spacing: {
-          blockGap: "var:preset|spacing|70",
-        },
-      },
     },
   ],
 ];
 
-const MenuButton = ({ className }) => {
+const MenuButton = ({ className }: { className: string }) => {
   return (
     <button className={`hamburger hamburger--chop ${className}`} type="button">
       <div className="inner">
