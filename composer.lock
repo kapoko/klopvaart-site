@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d0e9ee4e33dcabca884caef760cf206",
+    "content-hash": "485787e8f071c9b9a4486f74b54079ed",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,12 +153,12 @@
             "time": "2024-06-24T20:46:46+00:00"
         },
         {
-            "name": "kapoko/klopvaart-theme",
+            "name": "klopvaart/klopvaart",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./packages/theme",
-                "reference": "b212383721e3fa65522c435030a96297eb773111"
+                "reference": "32cf36514927612ede7f5c91b7f065782d93ec4c"
             },
             "require": {
                 "symfony/asset": "^6.3",
@@ -941,7 +941,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kapoko/klopvaart-theme": 20
+        "klopvaart/klopvaart": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

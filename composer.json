@@ -1,57 +1,66 @@
 {
-  "name": "kapoko/klopvaart-site",
-  "description": "Website voor Vereniging Centraal Wonen de Klopvaart",
-  "type": "project",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "kapoko",
-      "email": "17455539+kapoko@users.noreply.github.com"
-    }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    "name": "kapoko/klopvaart-site",
+    "description": "Website voor Vereniging Centraal Wonen de Klopvaart",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "kapoko",
+            "email": "17455539+kapoko@users.noreply.github.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
+        {
+            "type": "composer",
+            "url": "https://connect.advancedcustomfields.com"
+        },
+        {
+            "type": "path",
+            "url": "./packages/theme",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "composer/installers": "^2.3",
+        "klopvaart/klopvaart": "@dev",
+        "roots/wordpress": "^6.3",
+        "symfony/dotenv": "^7.1",
+        "symfony/flex": "^2.4"
     },
-    {
-      "type": "composer",
-      "url": "https://connect.advancedcustomfields.com"
+    "extra": {
+        "wordpress-install-dir": "web/wp",
+        "installer-paths": {
+            "web/wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
+            "web/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "web/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
     },
-    {
-      "type": "path",
-      "url": "./packages/theme",
-      "options": {
-        "symlink": true
-      }
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.3"
+        },
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "symfony/flex": true,
+            "composer/installers": true
+        }
     }
-  ],
-  "prefer-stable": true,
-  "require": {
-    "composer/installers": "^2.3",
-    "kapoko/klopvaart-theme": "@dev",
-    "roots/wordpress": "^6.3",
-    "symfony/dotenv": "^7.1",
-    "symfony/flex": "^2.4"
-  },
-  "extra": {
-    "wordpress-install-dir": "web/wp",
-    "installer-paths": {
-      "web/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/wp-content/themes/{$name}/": ["type:wordpress-theme"]
-    }
-  },
-  "config": {
-    "sort-packages": true,
-    "platform": {
-      "php": "8.3"
-    },
-    "allow-plugins": {
-      "roots/wordpress-core-installer": true,
-      "symfony/flex": true,
-      "composer/installers": true
-    }
-  }
 }
