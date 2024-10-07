@@ -13,24 +13,27 @@ array_map(
     },
     ["setup"]
 );
+
+add_filter('body_class', function ($classes) {
+    return array_merge($classes, ["transition-colors", "duration-500"]);
+});
+
 /**
  * Allowed blocks
  */
-// add_filter("allowed_block_types_all", function ($allowed_blocks) {
-//     return ["core/paragraph", "core/heading", "gutenberg-examples/*"];
-// });
+//add_filter("allowed_block_types_all", function ($allowed_blocks) {
+//    return ["core/paragraph", "core/heading", "klopvaart/*"];
+//});
 
 add_action(
     "block_categories_all",
     function ($categories) {
         return array_merge(
             $categories,
-            [
-            [
-                "slug" => "klopvaart",
-                "title" => "Klopvaart Blocks",
-            ],
-            ]
+            [[
+               "slug" => "klopvaart",
+               "title" => "Klopvaart Blocks",
+            ]]
         );
     },
     10,
@@ -40,13 +43,27 @@ add_action(
 add_action(
     'enqueue_block_editor_assets',
     function () {
-        $asset_file  = include plugin_dir_path(__FILE__) . 'build/core.asset.php';
+        $asset = include get_stylesheet_directory() . '/build/core.asset.php';
 
         wp_enqueue_script(
             'core',
             get_stylesheet_directory_uri() . '/build/core.js',
-            $asset_file['dependencies'],
-            $asset_file['version']
+            $asset['dependencies'],
+            $asset['version']
+        );
+    }
+);
+
+add_action(
+    'enqueue_block_assets',
+    function () {
+        $asset = include get_stylesheet_directory() . '/build/global.asset.php';
+
+        wp_enqueue_style(
+            'global',
+            get_stylesheet_directory_uri() . '/build/global.css',
+            $asset['dependencies'],
+            $asset['version']
         );
     }
 );
@@ -67,9 +84,9 @@ array_map(
 add_action(
     "init",
     function () {
-        register_block_type(__DIR__ . "/build/custom-example");
-        register_block_type(__DIR__ . "/build/variation");
-        register_block_type(__DIR__ . "/build/navigation");
+        foreach (['custom-example', 'variation', 'navigation'] as $block) {
+            register_block_type(__DIR__ . "/build/" . $block);
+        }
     }
 );
 

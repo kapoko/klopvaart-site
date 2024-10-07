@@ -1,8 +1,10 @@
 {
-  "name": "@klopvaart/site",
-  "workspaces": ["packages/*"],
-  "scripts": {
-    "start": "npm start --ws",
-    "build": "npm run build --ws"
-  }
+    "name": "@klopvaart/site",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "npm start --ws",
+        "build": "npm run build --ws"
+    }
 }
