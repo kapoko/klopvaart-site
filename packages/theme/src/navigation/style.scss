@@ -1,17 +1,32 @@
-@use "~delicious-hamburgers/scss/base";
-@use "~delicious-hamburgers/scss/animations/chop";
+@use "~delicious-hamburgers/scss/base" with (
+  $hamburger-background: var(--wp--preset--color--contrast),
+  $hamburger-color: #fff,
+  $hamburger-padding: 10px,
+  $hamburger-border-radius: 5px
+);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "~delicious-hamburgers/scss/animations/chop";
 
-.current-menu-item::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  bottom: -0.3em;
-  left: -5%;
-  width: 110%;
-  height: 6px;
-  background: paleturquoise;
+.current-menu-item {
+  font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+  body.menu-open {
+    background: hsl(from var(--wp--preset--color--base) h calc(s - 60) calc(l - 20));
+  }
+
+  .current-menu-item span::before {
+    content: "→";
+    position: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+.admin-bar .wp-block-klopvaart-navigation > div {
+  top: var(--wp-admin--admin-bar--height);
+}
+
+.wp-block-klopvaart-navigation img {
+  filter: invert(1);
 }

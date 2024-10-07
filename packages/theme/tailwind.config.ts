@@ -1,15 +1,24 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    content: [
-        "./src/**/*.{php,ts,tsx,js}",
-        "./patterns/**/*.php",
-        "./parts/**/*.html",
-        "./patterns/**/*.html",
-    ],
-    safelist: ["hidden"],
-    theme: {
-        extend: {},
+  content: [
+    "./*.php",
+    "./src/**/*.{php,ts,tsx,js}",
+    "./patterns/**/*.php",
+    "./parts/**/*.html",
+    "./patterns/**/*.html",
+  ],
+  safelist: ["hidden"],
+  theme: {
+    borderWidth: {
+      DEFAULT: "1px",
+      "0": "0",
+      "2": "2px",
+      "3": "3px",
+      "4": "4px",
+      "6": "6px",
     },
-    plugins: [require("@tailwindcss/typography")],
+    extend: {},
+  },
+  plugins: [require("@tailwindcss/typography")],
 } satisfies Config;
