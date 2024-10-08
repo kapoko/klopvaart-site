@@ -7,7 +7,7 @@
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.15",
-        "@types/node": "^22.7.4",
+        "@types/node": "^22.7.5",
         "@types/webpack": "^5.28.5",
         "@types/wordpress__block-editor": "^11.5.15",
         "@wordpress/blocks": "^13.9.0",

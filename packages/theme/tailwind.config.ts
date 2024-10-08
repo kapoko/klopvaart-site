@@ -8,7 +8,7 @@ export default {
     "./parts/**/*.html",
     "./templates/**/*.html",
   ],
-  safelist: ["hidden", "--breakpoint-xl"],
+  safelist: ["hidden"],
   theme: {
     borderWidth: {
       DEFAULT: "1px",
@@ -18,15 +18,23 @@ export default {
       "4": "4px",
       "6": "6px",
     },
-    extend: {},
+    container: {
+      center: true,
+      padding: "0.75rem",
+    },
   },
   plugins: [
     ({ addBase, theme }) => {
       const screens = theme("screens");
+
       const variables = Object.keys(screens).reduce((acc, key) => {
         acc[`--breakpoint-${key}`] = screens[key];
         return acc;
       }, {});
+
+      const { padding } = theme("container");
+      variables["--container-padding"] = padding;
+
       addBase({
         ":root": variables,
       });

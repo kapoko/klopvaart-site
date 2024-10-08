@@ -5,6 +5,9 @@
 .wp-site-blocks
   .is-layout-constrained
   > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+
   @screen sm {
     max-width: var(--breakpoint-sm);
   }
