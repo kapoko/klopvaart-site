@@ -2,13 +2,13 @@ import type { Config } from "tailwindcss";
 
 export default {
   content: [
-    "./*.php",
-    "./src/**/*.{php,ts,tsx,js}",
+    "./functions.php",
+    "./src/**/*.{php,ts,tsx,js,css,scss}",
     "./patterns/**/*.php",
     "./parts/**/*.html",
-    "./patterns/**/*.html",
+    "./templates/**/*.html",
   ],
-  safelist: ["hidden"],
+  safelist: ["hidden", "--breakpoint-xl"],
   theme: {
     borderWidth: {
       DEFAULT: "1px",
@@ -20,5 +20,16 @@ export default {
     },
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    ({ addBase, theme }) => {
+      const screens = theme("screens");
+      const variables = Object.keys(screens).reduce((acc, key) => {
+        acc[`--breakpoint-${key}`] = screens[key];
+        return acc;
+      }, {});
+      addBase({
+        ":root": variables,
+      });
+    },
+  ],
 } satisfies Config;

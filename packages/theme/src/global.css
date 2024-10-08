@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wp-site-blocks
+  .is-layout-constrained
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  @screen sm {
+    max-width: var(--breakpoint-sm);
+  }
+  @screen md {
+    max-width: var(--breakpoint-md);
+  }
+  @screen lg {
+    max-width: var(--breakpoint-lg);
+  }
+  @screen xl {
+    max-width: var(--breakpoint-xl);
+  }
+  @screen 2xl {
+    max-width: var(--breakpoint-2xl);
+  }
+}
