@@ -6,6 +6,7 @@ import type { BlockEditPropsWithName } from "@wordpress/hooks";
 import { addFilter } from "@wordpress/hooks";
 
 import "./style.css";
+import "./editor.css";
 
 interface Attr {
   restrictedFirstColumn: boolean;

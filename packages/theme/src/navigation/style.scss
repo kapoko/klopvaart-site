@@ -11,7 +11,7 @@
   font-weight: bold;
 }
 
-body.menu-open::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -19,6 +19,7 @@ body.menu-open::before {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0);
+  transition: background-color 250ms linear;
   pointer-events: none;
 }
 

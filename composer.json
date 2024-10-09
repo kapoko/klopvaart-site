@@ -33,7 +33,7 @@
     "prefer-stable": true,
     "require": {
         "composer/installers": "^2.3",
-        "klopvaart/klopvaart": "@dev",
+        "klopvaart/theme": "@dev",
         "roots/wordpress": "^6.3",
         "symfony/dotenv": "^7.1",
         "symfony/flex": "^2.4"

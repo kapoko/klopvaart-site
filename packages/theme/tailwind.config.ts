@@ -22,6 +22,13 @@ export default {
       center: true,
       padding: "0.75rem",
     },
+    screens: {
+      sm: "640px",
+      md: "782px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [
     ({ addBase, theme }) => {
