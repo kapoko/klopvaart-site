@@ -78,7 +78,7 @@ array_map(
             wp_die(sprintf(__("Error locating <code>%s</code>.", "klopvaart"), $file));
         }
     },
-    ["navigation"]
+    ["columns", "navigation"]
 );
 
 add_action(

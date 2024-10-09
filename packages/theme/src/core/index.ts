@@ -1,1 +1,2 @@
-import "./navigation/index.tsx";
+import "./navigation";
+import "./columns";

@@ -11,9 +11,20 @@
   font-weight: bold;
 }
 
+body.menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+}
+
 @media (max-width: 1023px) {
-  body.menu-open {
-    background: hsl(from var(--wp--preset--color--base) h calc(s - 60) calc(l - 20));
+  body.menu-open::before {
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .current-menu-item span::before {
