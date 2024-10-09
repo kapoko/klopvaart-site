@@ -51,6 +51,13 @@ add_action(
             $asset['dependencies'],
             $asset['version']
         );
+
+        wp_enqueue_style(
+            'core',
+            get_stylesheet_directory_uri() . '/build/core.css',
+            [],
+            $asset['version']
+        );
     }
 );
 
@@ -63,6 +70,13 @@ add_action(
             'global',
             get_stylesheet_directory_uri() . '/build/global.css',
             $asset['dependencies'],
+            $asset['version']
+        );
+
+        wp_enqueue_style(
+            'style-core',
+            get_stylesheet_directory_uri() . '/build/style-core.css',
+            [],
             $asset['version']
         );
     }
