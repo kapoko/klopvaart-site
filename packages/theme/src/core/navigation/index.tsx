@@ -1,16 +1,12 @@
-import type { BlockEditProps } from "@wordpress/blocks";
+import type { BlockEditPropsWithName } from "@wordpress/hooks";
 import { addFilter } from "@wordpress/hooks";
 
 import clsx from "clsx";
 
-interface BlockFilterProps extends BlockEditProps<Record<never, never>> {
-  name: string;
-}
-
 addFilter(
   "editor.BlockListBlock",
   "core/navigation/add-classes",
-  (BlockListBlock) => (props: BlockFilterProps) => {
+  (BlockListBlock) => (props: BlockEditPropsWithName) => {
     const { name, className } = props;
 
     if ("core/navigation" !== name) {
