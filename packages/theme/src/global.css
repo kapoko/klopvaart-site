@@ -8,9 +8,6 @@
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
 
-  @screen sm {
-    max-width: var(--breakpoint-sm);
-  }
   @screen md {
     max-width: var(--breakpoint-md);
   }
@@ -22,5 +19,8 @@
   }
   @screen 2xl {
     max-width: var(--breakpoint-2xl);
+  }
+  @screen 3xl {
+    max-width: var(--breakpoint-3xl);
   }
 }

@@ -101,6 +101,8 @@ define("WP_CACHE", filter_var($_ENV["WORDPRESS_CACHE"], FILTER_VALIDATE_BOOLEAN)
 define("DISALLOW_FILE_MODS", filter_var($_ENV["WORDPRESS_DISALLOW_FILE_MODS"], FILTER_VALIDATE_BOOLEAN));
 define("WP_DEBUG", filter_var($_ENV["WORDPRESS_DEBUG"], FILTER_VALIDATE_BOOLEAN));
 define("SCRIPT_DEBUG", filter_var($_ENV["WORDPRESS_DEBUG"], FILTER_VALIDATE_BOOLEAN));
+define("WP_DEVELOPMENT_MODE", filter_var($_ENV["WORDPRESS_DEBUG"], FILTER_VALIDATE_BOOLEAN) ? "all" : "");
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
