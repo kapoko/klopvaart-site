@@ -5,18 +5,15 @@ import { PanelBody, PanelRow, ToggleControl } from "@wordpress/components";
 import type { BlockEditPropsWithName } from "@wordpress/hooks";
 import { addFilter } from "@wordpress/hooks";
 
-import "./style.css";
-import "./editor.css";
-
 interface Attr {
-  restrictedFirstColumn: boolean;
+  makeSticky: boolean;
 }
 
 addFilter(
   "blocks.registerBlockType",
-  "klopvaart/core-columns/add-attributes",
+  "klopvaart/core-column/add-attributes",
   (settings) => {
-    if ("core/columns" !== settings.name) {
+    if ("core/column" !== settings.name) {
       return settings;
     }
 
@@ -24,7 +21,7 @@ addFilter(
       ...settings,
       attributes: {
         ...settings.attributes,
-        restrictedFirstColumn: {
+        makeSticky: {
           type: "boolean",
         },
       },
@@ -36,14 +33,15 @@ addFilter(
 
 addFilter(
   "editor.BlockEdit",
-  "klopvaart/core-columns/add-inspector-controls",
+  "klopvaart/core-column/add-inspector-controls",
   (BlockEdit) => (props: BlockEditPropsWithName<Attr>) => {
-    if (props.name !== "core/columns") {
+    if (props.name !== "core/column") {
       return <BlockEdit {...props} />;
     }
 
     const { attributes, setAttributes } = props;
-    const { restrictedFirstColumn } = attributes;
+    const { makeSticky } = attributes;
+
     return (
       <>
         <BlockEdit {...props} />
@@ -54,11 +52,11 @@ addFilter(
           >
             <PanelRow>
               <ToggleControl
-                label={__("Restrict left column to content size", "klopvaart")}
-                checked={restrictedFirstColumn}
+                label={__("Make column sticky", "klopvaart")}
+                checked={makeSticky}
                 onChange={() => {
                   setAttributes({
-                    restrictedFirstColumn: !restrictedFirstColumn,
+                    makeSticky: !makeSticky,
                   });
                 }}
               />
@@ -72,15 +70,15 @@ addFilter(
 
 addFilter(
   "editor.BlockListBlock",
-  "klopvaart/core-columns/add-classes",
+  "klopvaart/core-column/add-classes",
   (BlockListBlock) => (props: BlockEditPropsWithName<Attr>) => {
     const { name, attributes, className } = props;
 
-    if ("core/columns" !== name || !attributes.restrictedFirstColumn) {
+    if ("core/column" !== name || !attributes.makeSticky) {
       return <BlockListBlock {...props} />;
     }
 
-    const classes = clsx(className, "has-restricted-first-column");
+    const classes = clsx(className, "sticky");
 
     return <BlockListBlock {...props} className={classes} />;
   },

@@ -1,0 +1,10 @@
+.klopvaart-button::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 8px;
+  transition: transform ease-out 150ms;
+}
+
+.klopvaart-button:hover::after {
+  transform: translate(10px, 0);
+}

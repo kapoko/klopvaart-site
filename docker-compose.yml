@@ -24,6 +24,9 @@ services:
       - 8080:80
     env_file:
       - .env
+    configs:
+      - source: extra.ini
+        target: /usr/local/etc/php/conf.d/extra.ini
 
   wordpress-cli:
     depends_on:
@@ -36,3 +39,10 @@ services:
       - ./.env:/var/www/html/.env
     env_file:
       - .env
+
+configs:
+  extra.ini:
+    content: |
+      memory_limit = 2048M
+      upload_max_filesize = 2048M
+      post_max_size = 2048M

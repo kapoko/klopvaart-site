@@ -40,6 +40,13 @@ add_action(
     2
 );
 
+add_action('init', function () {
+    register_block_pattern_category(
+        'klopvaart',
+        ['label' => __('Klopvaart', 'klopvaart')]
+    );
+});
+
 add_action(
     'enqueue_block_editor_assets',
     function () {
@@ -92,13 +99,13 @@ array_map(
             wp_die(sprintf(__("Error locating <code>%s</code>.", "klopvaart"), $file));
         }
     },
-    ["columns", "navigation"]
+    ["columns", "column", "navigation", "button"]
 );
 
 add_action(
     "init",
     function () {
-        foreach (['custom-example', 'variation', 'navigation'] as $block) {
+        foreach (['custom-example', 'navigation', 'core/button'] as $block) {
             register_block_type(__DIR__ . "/build/" . $block);
         }
     }

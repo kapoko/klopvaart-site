@@ -4,7 +4,6 @@
  * Slug: klopvaart/header
  * Categories: header
  */
-
 ?>
 
 <!-- wp:klopvaart/navigation -->
