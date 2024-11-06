@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "klopvaart/sticky-group",
+  "title": "Sticky Group",
+  "textdomain": "klopvaart",
+  "category": "klopvaart",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

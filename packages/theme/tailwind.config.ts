@@ -8,7 +8,7 @@ export default {
     "./parts/**/*.html",
     "./templates/**/*.html",
   ],
-  safelist: ["hidden"],
+  safelist: ["hidden", "h-full"],
   theme: {
     borderWidth: {
       DEFAULT: "1px",

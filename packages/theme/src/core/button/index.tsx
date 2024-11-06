@@ -60,5 +60,3 @@ addFilter(
     );
   },
 );
-
-console.log("HI from core");
