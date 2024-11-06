@@ -24,3 +24,14 @@
     max-width: var(--breakpoint-3xl);
   }
 }
+
+div.circle {
+  position: absolute;
+  mix-blend-mode: exclusion;
+  top: 50vh;
+  right: 15vh;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  background-color: #ca0000;
+}
