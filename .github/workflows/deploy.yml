@@ -52,4 +52,4 @@ jobs:
           wp --path=web/wp language theme --all update && \
           wp --path=web/wp rewrite flush
         source: packages/theme/build
-        target: domains/beta.klopvaart.nl/public_html/packages/theme/build
+        target: domains/beta.klopvaart.nl/public_html/packages/theme
