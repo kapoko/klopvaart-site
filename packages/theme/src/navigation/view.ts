@@ -1,4 +1,4 @@
-import { store, getContext } from "@wordpress/interactivity";
+import { store } from "@wordpress/interactivity";
 
 type State = {
   menuOpen: boolean;

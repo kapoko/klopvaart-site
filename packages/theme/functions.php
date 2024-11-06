@@ -105,7 +105,7 @@ array_map(
 add_action(
     "init",
     function () {
-        foreach (['custom-example', 'navigation', 'core/button'] as $block) {
+        foreach (['custom-example', 'navigation', 'sticky-group'] as $block) {
             register_block_type(__DIR__ . "/build/" . $block);
         }
     }
