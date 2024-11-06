@@ -73,6 +73,13 @@ add_action(
     function () {
         $asset = include get_stylesheet_directory() . '/build/global.asset.php';
 
+        wp_enqueue_script(
+            'global',
+            get_stylesheet_directory_uri() . '/build/global.js',
+            $asset['dependencies'],
+            $asset['version']
+        );
+
         wp_enqueue_style(
             'global',
             get_stylesheet_directory_uri() . '/build/global.css',
