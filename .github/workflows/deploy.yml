@@ -27,3 +27,29 @@ jobs:
       run: |
         npm ci
         npm run build
+
+    - name: Run git pull on remote, install dependencies and copy artifacts
+      uses: kapoko/scp-action@v0
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        proxy_host: ${{ secrets.SSH_PROXY_HOST }}
+        proxy_port: ${{ secrets.SSH_PROXY_PORT }}
+        proxy_username: ${{ secrets.SSH_PROXY_USERNAME }}
+        proxy_password: ${{ secrets.SSH_PROXY_PASSWORD }}
+        command: |
+          PATH="/home/${{ secrets.SSH_USERNAME }}/bin/:$PATH"
+          cd domains/beta.klopvaart.nl/public_html && \
+          git checkout main
+          if ! git pull; then
+            exit 1
+          fi
+          composer install && \ 
+          composer dump-env prod && \
+          wp --path=web/wp language core update && \
+          wp --path=web/wp language plugin --all update && \
+          wp --path=web/wp language theme --all update && \
+          wp --path=web/wp rewrite flush
+        source: packages/theme/build
+        target: domains/beta.klopvaart.nl/public_html/packages/theme/build
