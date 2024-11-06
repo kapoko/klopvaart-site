@@ -52,7 +52,8 @@ window.addEventListener("load", (event) => {
   for (const el of scrollElements) {
     const scrollSpeed = parseFloat(el.getAttribute("data-scrollparallax"));
 
-    el.style.right = randomIntFromInterval(0, 40) + "vh";
+    el.style.right = randomIntFromInterval(0, 20) + "vw";
+    el.style.visibility = "visible";
 
     console.log(el);
     const update = (value) => {
