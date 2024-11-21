@@ -6,20 +6,20 @@
     "start": "wp-scripts start --experimental-modules --config=webpack.config.ts"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^22.9.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/node": "^22.10.7",
     "@types/webpack": "^5.28.5",
-    "@types/wordpress__block-editor": "^11.5.15",
-    "@wordpress/block-editor": "^14.6.0",
-    "@wordpress/hooks": "^4.11.0",
-    "@wordpress/interactivity": "^6.11.0",
-    "@wordpress/plugins": "^7.11.0",
-    "@wordpress/scripts": "^30.4.0",
+    "@types/wordpress__block-editor": "^11.5.16",
+    "@wordpress/block-editor": "^14.11.0",
+    "@wordpress/hooks": "^4.16.0",
+    "@wordpress/interactivity": "^6.16.0",
+    "@wordpress/plugins": "^7.16.0",
+    "@wordpress/scripts": "^30.9.0",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10"
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
   },
   "dependencies": {
     "delicious-hamburgers": "^1.2.3"
