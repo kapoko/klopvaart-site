@@ -18,7 +18,7 @@ add_filter(
                     $p->add_class("w-full lg:w-auto");
                     break;
                 case "A":
-                    $p->add_class("w-full lg:w-auto !py-4 lg:!py-0");
+                    $p->add_class("w-full lg:w-auto py-4! lg:py-0!");
                     break;
             }
         }

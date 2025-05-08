@@ -50,7 +50,7 @@ registerBlockType(metadata.name, {
             template={TEMPLATE}
           />
         </div>
-        <MenuButton className={"md:hidden"} />
+        <MenuButton className={"md:hidden!"} />
       </div>
     );
   },

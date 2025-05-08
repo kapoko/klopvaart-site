@@ -1,0 +1,21 @@
+import type { Config } from "tailwindcss";
+
+export default {
+    plugins: [
+        ({ addBase, theme }) => {
+            const screens = theme("screens");
+
+            const variables = Object.keys(screens).reduce((acc, key) => {
+                acc[`--breakpoint-${key}`] = screens[key];
+                return acc;
+            }, {});
+
+            const { padding } = theme("container");
+            variables["--container-padding"] = padding;
+
+            addBase({
+                ":root": variables,
+            });
+        },
+    ],
+}
