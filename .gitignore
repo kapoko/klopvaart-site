@@ -4,6 +4,7 @@
 *.cache
 /vendor
 /database
+/web/.htaccess
 /web/wp
 /web/wp-content/*
 !/web/wp-content/mu-plugins
