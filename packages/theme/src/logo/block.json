@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "klopvaart/logo",
+  "title": "Klopvaart Logo",
+  "textdomain": "klopvaart",
+  "category": "klopvaart",
+  "supports": {
+    "customClassName": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -8,7 +8,7 @@ array_map(
     function ($file) {
         $file = "./app/{$file}.php";
         if (!locate_template($file, true, true)) {
-            wp_die(sprintf(__("Error locating <code>%s</code>.", "klopvaart"), $file));
+            wp_die(sprintf("Error locating <code>%s</code>.", "klopvaart"), $file);
         }
     },
     ["setup"]
@@ -103,18 +103,29 @@ array_map(
     function ($blockName) {
         $file = "./src/core/{$blockName}/{$blockName}.php";
         if (!locate_template($file, true, true)) {
-            wp_die(sprintf(__("Error locating <code>%s</code>.", "klopvaart"), $file));
+            wp_die(sprintf("Error locating <code>%s</code>.", "klopvaart", $file));
         }
     },
     ["columns", "column", "navigation", "button"]
 );
 
+/**
+ * Register custom blocks
+ */
 add_action(
     "init",
     function () {
-        foreach (['custom-example', 'navigation', 'sticky-group'] as $block) {
-            register_block_type(__DIR__ . "/build/" . $block);
-        }
+        wp_register_block_types_from_metadata_collection(
+            __DIR__ . '/build',
+            __DIR__ . '/build/blocks-manifest.php'
+        );
+    }
+);
+
+add_action(
+    "after_setup_theme",
+    function () {
+        load_theme_textdomain("klopvaart", get_template_directory() . '/languages');
     }
 );
 

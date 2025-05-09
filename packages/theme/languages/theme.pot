@@ -1,0 +1,173 @@
+# Copyright (C) 2025 Kasper Koman
+# This file is distributed under the same license as the Klopvaart theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Klopvaart 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-05-13T14:17:17+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: klopvaart\n"
+
+#. Theme Name of the theme
+#: style.css
+#: functions.php:46
+msgid "Klopvaart"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Custom theme for klopvaart website"
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Kasper Koman"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer Wrap"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: build/core.js:1
+msgid "Klopvaart Settings"
+msgstr ""
+
+#: build/core.js:1
+msgid "Restrict left column to content size"
+msgstr ""
+
+#: build/core.js:1
+msgid "Make column sticky"
+msgstr ""
+
+#: build/core.js:1
+msgid "Blue Group"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Color"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Logo color"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Settings"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Size"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Small"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Big"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Logo version"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Logo"
+msgstr ""
+
+#: build/logo/index.js:1
+msgid "Logo With Text"
+msgstr ""
+
+#: build/footer/block.json
+#: src/footer/block.json
+msgctxt "block title"
+msgid "Footer Joe"
+msgstr ""
+
+#: build/logo/block.json
+#: src/logo/block.json
+msgctxt "block title"
+msgid "Klopvaart Logo"
+msgstr ""
+
+#: build/navigation/block.json
+#: src/navigation/block.json
+msgctxt "block title"
+msgid "Klopvaart Navigation"
+msgstr ""
+
+#: build/sticky-group/block.json
+#: src/sticky-group/block.json
+msgctxt "block title"
+msgid "Sticky Group"
+msgstr ""
+
+#: build/sticky-group/block.json
+#: src/sticky-group/block.json
+msgctxt "block description"
+msgid "Block that stays in view when scrolling down"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Red"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Mint"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Fredoka"
+msgstr ""

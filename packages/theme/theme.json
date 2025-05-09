@@ -22,6 +22,11 @@
           "slug": "contrast"
         },
         {
+          "color": "#FFFFFF",
+          "name": "White",
+          "slug": "white"
+        },
+        {
           "color": "#DC2626",
           "name": "Red",
           "slug": "red"

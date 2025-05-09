@@ -1,11 +1,10 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "klopvaart/sticky-group",
-  "title": "Sticky Group",
-  "description": "Block that stays in view when scrolling down",
+  "name": "klopvaart/footerjoe",
+  "title": "Footer Joe",
   "textdomain": "klopvaart",
   "category": "klopvaart",
-  "editorScript": "file:./index.js",
+  "editorScript": "file:index.js",
   "render": "file:./render.php"
 }

@@ -2,16 +2,17 @@
 
 namespace App;
 
-use App\Vite;
-use App\ViteAssetVersionStrategy;
-use Symfony\Component\Asset\Package;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
+//use App\Vite;
+//use App\ViteAssetVersionStrategy;
+//use Symfony\Component\Asset\Package;
+//use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * Theme setup
  */
+
 add_action("after_setup_theme", function () {
-    $container = new ContainerBuilder();
+    //$container = new ContainerBuilder();
 
     //$container
     //    ->register("asset", Package::class)
@@ -29,9 +30,9 @@ add_action("after_setup_theme", function () {
 add_action("enqueue_block_assets", function () {
     //Vite::enqueueScript("assets/js/main.js");
 
-    if (!Vite::isRunning()) {
-        //wp_enqueue_style("klopvaart/main", Vite::asset("assets/js/main.css"), [], null);
-    }
+    //if (!Vite::isRunning()) {
+    //    //wp_enqueue_style("klopvaart/main", Vite::asset("assets/js/main.css"), [], null);
+    //}
 });
 
 /**
@@ -40,9 +41,9 @@ add_action("enqueue_block_assets", function () {
 add_action("enqueue_block_editor_assets", function () {
     //Vite::enqueueScript("assets/js/editor-main.js");
 
-    if (!Vite::isRunning()) {
-        //wp_enqueue_style("klopvaart/editor-main", Vite::asset("assets/js/editor-main.css"), [], null);
-    }
+    //if (!Vite::isRunning()) {
+    //    //wp_enqueue_style("klopvaart/editor-main", Vite::asset("assets/js/editor-main.css"), [], null);
+    //}
 });
 
 // /**

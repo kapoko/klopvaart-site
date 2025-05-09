@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es2023", "dom"],
+    "lib": ["es2023", "dom", "dom.iterable"],
     "jsx": "react-jsx",
     "module": "commonjs",
     "types": ["node"],
@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,
+    "downlevelIteration": true,
     "typeRoots": ["packages/theme/src/@types", "./node_modules/@types"]
   },
   "include": ["packages/theme/src/**/*"],
