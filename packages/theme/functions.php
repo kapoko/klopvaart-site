@@ -8,7 +8,7 @@ array_map(
     function ($file) {
         $file = "./app/{$file}.php";
         if (!locate_template($file, true, true)) {
-            wp_die(sprintf("Error locating <code>%s</code>.", "klopvaart"), $file);
+            wp_die(sprintf("Error locating <code>%s</code>.", $file));
         }
     },
     ["setup"]
@@ -65,6 +65,8 @@ add_action(
             [],
             $asset['version']
         );
+
+        wp_set_script_translations("core", "klopvaart", get_stylesheet_directory_uri() . '/languages');
     }
 );
 
@@ -103,10 +105,10 @@ array_map(
     function ($blockName) {
         $file = "./src/core/{$blockName}/{$blockName}.php";
         if (!locate_template($file, true, true)) {
-            wp_die(sprintf("Error locating <code>%s</code>.", "klopvaart", $file));
+            wp_die(sprintf("Error locating <code>%s</code>.", $file));
         }
     },
-    ["columns", "column", "navigation", "button"]
+    ["columns", "navigation", "button"]
 );
 
 /**
@@ -138,3 +140,7 @@ if (!function_exists("asset")) {
         return apply_filters("getAssetUrl", $assetName);
     }
 }
+
+add_shortcode('year', function () {
+    return date('Y');
+});

@@ -32,6 +32,7 @@
     "symfony/dotenv": "^7.1",
     "symfony/flex": "^2.4",
     "wpackagist-plugin/auto-block-recovery": "^0.1.7",
+    "wpackagist-plugin/gutenberg": "^20.7",
     "wpackagist-plugin/wordpress-importer": "^0.8.4",
     "wpackagist-theme/twentytwentyfive": "^1.2"
   },

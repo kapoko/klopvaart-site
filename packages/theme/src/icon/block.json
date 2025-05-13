@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "klopvaart/icon",
+  "title": "Klopvaart Icon",
+  "textdomain": "klopvaart",
+  "category": "klopvaart",
+  "editorScript": "file:./index.js"
+}

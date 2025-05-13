@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49bc12082cd4509c26a04044bd0e8763",
+    "content-hash": "d9e5c4f378b0dcc670260efc26756e50",
     "packages": [
         {
             "name": "composer/installers",
@@ -521,6 +521,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/auto-block-recovery/"
+        },
+        {
+            "name": "wpackagist-plugin/gutenberg",
+            "version": "20.7.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gutenberg/",
+                "reference": "tags/20.7.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.20.7.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gutenberg/"
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",

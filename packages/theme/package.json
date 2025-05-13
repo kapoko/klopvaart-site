@@ -15,6 +15,7 @@
     "@types/wordpress__block-editor": "^11.5.16",
     "@wordpress/block-editor": "^14.18.0",
     "@wordpress/hooks": "^4.23.0",
+    "@wordpress/icons": "^10.23.0",
     "@wordpress/interactivity": "^6.23.0",
     "@wordpress/plugins": "^7.23.0",
     "@wordpress/scripts": "^30.16.0",

@@ -12,13 +12,13 @@ add_filter(
         while ($p->next_tag()) {
             switch ($p->get_tag()) {
                 case "NAV":
-                    $p->add_class("gap-0 lg:!gap-10");
+                    $p->add_class("gap-x-0 gap-y-2 lg:!gap-x-10");
                     break;
                 case "LI":
                     $p->add_class("w-full lg:w-auto");
                     break;
                 case "A":
-                    $p->add_class("w-full lg:w-auto py-4! lg:py-0!");
+                    $p->add_class("w-full lg:w-auto");
                     break;
             }
         }

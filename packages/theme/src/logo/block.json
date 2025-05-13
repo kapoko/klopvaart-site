@@ -8,5 +8,10 @@
   "supports": {
     "customClassName": false
   },
+  "example": {
+    "color": "#000000",
+    "size": "big",
+    "version": "image"
+  },
   "editorScript": "file:./index.js"
 }

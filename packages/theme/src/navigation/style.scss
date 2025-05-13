@@ -28,10 +28,16 @@ body::before {
     background: rgba(0, 0, 0, 0.3);
   }
 
-  .current-menu-item span::before {
-    content: "→";
-    position: inline-block;
-    margin-right: 1rem;
+  .wp-block-klopvaart-navigation {
+     a {
+       padding: .5rem 0;
+     }
+
+    .current-menu-item span::before {
+      content: "→";
+      position: inline-block;
+      margin-right: 1rem;
+    }
   }
 }
 
