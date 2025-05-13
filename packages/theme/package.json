@@ -2,9 +2,9 @@
   "name": "@klopvaart/theme",
   "type": "module",
   "scripts": {
-    "build": "wp-scripts build --experimental-modules --config=webpack.config.ts --blocks-manifest && npm run make-json",
+    "build": "wp-scripts build --experimental-modules --config=webpack.config.ts --blocks-manifest",
     "start": "wp-scripts start --experimental-modules --config=webpack.config.ts --blocks-manifest",
-    "make-pot": "npm run build && wp i18n make-pot . languages/theme.pot --domain=klopvaart --exclude=node_modules",
+    "make-pot": "wp i18n make-pot . languages/theme.pot --domain=klopvaart --exclude=node_modules",
     "make-json": "wp i18n make-json languages ../../web/wp-content/languages/themes --no-purge"
   },
   "devDependencies": {

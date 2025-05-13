@@ -51,5 +51,6 @@ jobs:
           wp --path=web/wp language plugin --all update && \
           wp --path=web/wp language theme --all update && \
           wp --path=web/wp rewrite flush
+          wp i18n make-json packages/theme/languages web/wp-content/languages/themes --no-purge
         source: packages/theme/build
         target: domains/beta.klopvaart.nl/public_html/packages/theme
