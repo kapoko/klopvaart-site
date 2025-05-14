@@ -22,7 +22,7 @@
   padding-inline: var(--container-padding);
 }
 
-@source inline("hidden,h-full");
+@source inline("hidden,block,h-full");
 
 .wp-site-blocks
   .is-layout-constrained

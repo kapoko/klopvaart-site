@@ -1,191 +1,187 @@
 {
-    "$schema": "https://schemas.wp.org/trunk/theme.json",
-    "version": 3,
-    "settings": {
-        "appearanceTools": true,
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "background": true,
+      "text": true,
+      "custom": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#FAE6BE",
+          "name": "Base",
+          "slug": "base"
+        },
+        {
+          "color": "#1c1917",
+          "name": "Contrast",
+          "slug": "contrast"
+        },
+        {
+          "color": "#909090",
+          "name": "Muted",
+          "slug": "muted"
+        },
+        {
+          "color": "#FFFFFF",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#DC2626",
+          "name": "Red",
+          "slug": "red"
+        },
+        {
+          "color": "#7ADC97",
+          "name": "Mint",
+          "slug": "mint"
+        }
+      ]
+    },
+    "spacing": {
+      "blockGap": null,
+      "margin": true,
+      "padding": true
+    },
+    "layout": {
+      "contentSize": "940px"
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fluid": true,
+      "fontSizes": [
+        {
+          "fluid": {
+            "max": "1.25rem",
+            "min": "1rem"
+          },
+          "name": "Medium",
+          "size": "1.25rem",
+          "slug": "medium"
+        },
+        {
+          "fluid": {
+            "max": "1.5rem",
+            "min": "1.125rem"
+          },
+          "name": "Large",
+          "size": "1.5rem",
+          "slug": "large"
+        },
+        {
+          "fluid": {
+            "max": "2.5rem",
+            "min": "1.75rem"
+          },
+          "name": "Extra Large",
+          "size": "2.5rem",
+          "slug": "x-large"
+        },
+        {
+          "fluid": {
+            "max": "4rem",
+            "min": "2rem"
+          },
+          "name": "Extra Extra Large",
+          "size": "3rem",
+          "slug": "xx-large"
+        }
+      ],
+      "fontFamilies": [
+        {
+          "name": "Fredoka",
+          "slug": "fredoka",
+          "fontFamily": "Fredoka, sans-serif",
+          "fontFace": [
+            {
+              "src": ["file:./assets/fonts/fredoka/Fredoka-Light.woff2"],
+              "fontWeight": "300",
+              "fontStyle": "normal",
+              "fontFamily": "Fredoka"
+            },
+            {
+              "src": ["file:./assets/fonts/fredoka/Fredoka-Medium.woff2"],
+              "fontWeight": "500",
+              "fontStyle": "normal",
+              "fontFamily": "Fredoka"
+            }
+          ]
+        }
+      ]
+    },
+    "blocks": {
+      "core/button": {
         "color": {
-            "background": true,
-            "text": true,
-            "custom": false,
-            "defaultDuotone": false,
-            "defaultGradients": false,
-            "defaultPalette": false,
-            "palette": [
-                {
-                    "color": "#FAE6BE",
-                    "name": "Base",
-                    "slug": "base"
-                },
-                {
-                    "color": "#1c1917",
-                    "name": "Contrast",
-                    "slug": "contrast"
-                },
-                {
-                    "color": "#909090",
-                    "name": "Muted",
-                    "slug": "muted"
-                },
-                {
-                    "color": "#FFFFFF",
-                    "name": "White",
-                    "slug": "white"
-                },
-                {
-                    "color": "#DC2626",
-                    "name": "Red",
-                    "slug": "red"
-                },
-                {
-                    "color": "#7ADC97",
-                    "name": "Mint",
-                    "slug": "mint"
-                }
-            ]
+          "background": false,
+          "text": false
+        },
+        "border": {
+          "radius": false
+        }
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|base",
+      "text": "var:preset|color|contrast"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|fredoka",
+      "fontSize": "var:preset|font-size|large",
+      "fontStyle": "normal",
+      "fontWeight": "300",
+      "lineHeight": "1.5"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|xx-large",
+          "lineHeight": "1.2"
+        }
+      }
+    },
+    "blocks": {
+      "core/heading": {
+        "spacing": {
+          "margin": {
+            "bottom": "0.3em"
+          }
+        }
+      },
+      "core/paragraph": {
+        "spacing": {
+          "margin": {
+            "bottom": "1em"
+          }
+        }
+      },
+      "core/button": {
+        "color": {
+          "text": "var:preset|color|contrast",
+          "background": "transparent"
         },
         "spacing": {
-            "blockGap": null,
-            "margin": true,
-            "padding": true
+          "padding": {
+            "left": "0",
+            "right": "0",
+            "top": "0.5em",
+            "bottom": "0.2em"
+          }
         },
-        "layout": {
-            "contentSize": "940px"
-        },
-        "typography": {
-            "defaultFontSizes": false,
-            "fluid": true,
-            "fontSizes": [
-                {
-                    "fluid": {
-                        "max": "1.25rem",
-                        "min": "1rem"
-                    },
-                    "name": "Medium",
-                    "size": "1.25rem",
-                    "slug": "medium"
-                },
-                {
-                    "fluid": {
-                        "max": "1.5rem",
-                        "min": "1.125rem"
-                    },
-                    "name": "Large",
-                    "size": "1.5rem",
-                    "slug": "large"
-                },
-                {
-                    "fluid": {
-                        "max": "2.5rem",
-                        "min": "1.75rem"
-                    },
-                    "name": "Extra Large",
-                    "size": "2.5rem",
-                    "slug": "x-large"
-                },
-                {
-                    "fluid": {
-                        "max": "4rem",
-                        "min": "2rem"
-                    },
-                    "name": "Extra Extra Large",
-                    "size": "3rem",
-                    "slug": "xx-large"
-                }
-            ],
-            "fontFamilies": [
-                {
-                    "name": "Fredoka",
-                    "slug": "fredoka",
-                    "fontFamily": "Fredoka, sans-serif",
-                    "fontFace": [
-                        {
-                            "src": [
-                                "file:./assets/fonts/fredoka/Fredoka-Light.woff2"
-                            ],
-                            "fontWeight": "300",
-                            "fontStyle": "normal",
-                            "fontFamily": "Fredoka"
-                        },
-                        {
-                            "src": [
-                                "file:./assets/fonts/fredoka/Fredoka-Medium.woff2"
-                            ],
-                            "fontWeight": "500",
-                            "fontStyle": "normal",
-                            "fontFamily": "Fredoka"
-                        }
-                    ]
-                }
-            ]
-        },
-        "blocks": {
-            "core/button": {
-                "color": {
-                    "background": false,
-                    "text": false
-                },
-                "border": {
-                    "radius": false
-                }
-            }
+        "border": {
+          "radius": "0",
+          "bottom": {
+            "color": "var:preset|color|mint",
+            "width": "4px"
+          }
         }
-    },
-    "styles": {
-        "color": {
-            "background": "var:preset|color|base",
-            "text": "var:preset|color|contrast"
-        },
-        "typography": {
-            "fontFamily": "var:preset|font-family|fredoka",
-            "fontSize": "var:preset|font-size|large",
-            "fontStyle": "normal",
-            "fontWeight": "300",
-            "lineHeight": "1.5"
-        },
-        "elements": {
-            "h1": {
-                "typography": {
-                    "fontSize": "var:preset|font-size|xx-large",
-                    "lineHeight": "1.2"
-                }
-            }
-        },
-        "blocks": {
-            "core/heading": {
-                "spacing": {
-                    "margin": {
-                        "bottom": "0.3em"
-                    }
-                }
-            },
-            "core/paragraph": {
-                "spacing": {
-                    "margin": {
-                        "bottom": "1em"
-                    }
-                }
-            },
-            "core/button": {
-                "color": {
-                    "text": "var:preset|color|contrast",
-                    "background": "transparent"
-                },
-                "spacing": {
-                    "padding": {
-                        "left": "0",
-                        "right": "0",
-                        "top": "0.5em",
-                        "bottom": "0.2em"
-                    }
-                },
-                "border": {
-                    "radius": "0",
-                    "bottom": {
-                        "color": "var:preset|color|mint",
-                        "width": "4px"
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

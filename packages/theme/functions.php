@@ -103,12 +103,12 @@ add_action(
  */
 array_map(
     function ($blockName) {
-        $file = "./src/core/{$blockName}/{$blockName}.php";
+        $file = "./src/core/{$blockName}/index.php";
         if (!locate_template($file, true, true)) {
             wp_die(sprintf("Error locating <code>%s</code>.", $file));
         }
     },
-    ["columns", "navigation", "button"]
+    ["columns", "navigation", "button", "spacer"]
 );
 
 /**

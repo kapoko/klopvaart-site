@@ -8,8 +8,8 @@
 
 ?>
 
-<!-- wp:group {"tagName":"footer","templateLock":false,"lock":{"move":false,"remove":false},"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"backgroundColor":"contrast","textColor":"white","layout":{"type":"constrained"}} -->
-<footer class="wp-block-group alignfull has-white-color has-contrast-background-color has-text-color has-background has-link-color"><!-- wp:spacer {"height":"120px"} -->
+<!-- wp:group {"tagName":"footer","templateLock":false,"lock":{"move":false,"remove":false},"align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"backgroundColor":"contrast","textColor":"white","layout":{"type":"constrained"}} -->
+<footer class="wp-block-group alignfull has-white-color has-contrast-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)"><!-- wp:spacer {"height":"120px","hideOnMobile":true} -->
 <div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
@@ -55,11 +55,11 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}}},"textColor":"muted","fontSize":"medium"} -->
-<p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size">© Alle rechten voorbehouden, 2025</p>
+<!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"textColor":"muted","fontSize":"medium"} -->
+<p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)">© Alle rechten voorbehouden, 2025</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:spacer {"height":"120px"} -->
+<!-- wp:spacer {"height":"120px","hideOnMobile":true} -->
 <div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></footer>
 <!-- /wp:group -->
