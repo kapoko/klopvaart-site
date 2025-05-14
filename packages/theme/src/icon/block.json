@@ -5,5 +5,10 @@
   "title": "Klopvaart Icon",
   "textdomain": "klopvaart",
   "category": "klopvaart",
+  "supports": {
+    "spacing": {
+      "margin": true
+    }
+  },
   "editorScript": "file:./index.js"
 }
