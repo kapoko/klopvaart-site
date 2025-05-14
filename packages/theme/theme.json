@@ -90,6 +90,15 @@
           "name": "Extra Extra Large",
           "size": "3rem",
           "slug": "xx-large"
+        },
+        {
+          "fluid": {
+            "max": "6rem",
+            "min": "2.5rem"
+          },
+          "name": "Extra Extra Extra Large",
+          "size": "5rem",
+          "slug": "xxx-large"
         }
       ],
       "fontFamilies": [

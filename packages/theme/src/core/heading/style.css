@@ -1,0 +1,39 @@
+@reference "../../global.css";
+
+.wp-block-heading[class~="big-page-title"] {
+  border-color: var(--wp--preset--color--red);
+  padding-left: var(--container-padding);
+
+  @variant sm {
+    border-left-width: .5rem;
+    padding-left: calc(
+      50% -
+      var(--breakpoint-sm) /
+      2 +
+      var(--container-padding) -
+      .5rem
+    );
+  }
+  @variant md {
+    padding-left: calc(
+      50% -
+      var(--breakpoint-md) /
+      2 +
+      var(--container-padding) -
+      .5rem
+    );
+  }
+  @variant lg {
+    border-left-width: var(--container-padding);
+    padding-left: calc(50% - var(--breakpoint-lg) / 2);
+  }
+  @variant xl {
+    padding-left: calc(50% - var(--breakpoint-xl) / 2);
+  }
+  @variant 2xl {
+    padding-left: calc(50% - var(--breakpoint-2xl) / 2);
+  }
+  @variant 3xl {
+    padding-left: calc(50% - var(--breakpoint-3xl) / 2);
+  }
+}

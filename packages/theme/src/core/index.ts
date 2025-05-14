@@ -3,3 +3,4 @@ import "./columns";
 import "./button";
 import "./group";
 import "./spacer";
+import "./heading";

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9e5c4f378b0dcc670260efc26756e50",
+    "content-hash": "99f82d3d31f86382b19d719c1ca159c4",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,7 +154,7 @@
         },
         {
             "name": "klopvaart/theme",
-            "version": "dev-dev",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./packages/theme",
@@ -503,60 +503,6 @@
                 }
             ],
             "time": "2025-05-10T14:05:03+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/auto-block-recovery",
-            "version": "0.1.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/auto-block-recovery/",
-                "reference": "tags/0.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/auto-block-recovery.0.1.7.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/auto-block-recovery/"
-        },
-        {
-            "name": "wpackagist-plugin/gutenberg",
-            "version": "20.7.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/20.7.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.20.7.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/gutenberg/"
-        },
-        {
-            "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.8.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.8.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.4.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-theme/twentytwentyfive",

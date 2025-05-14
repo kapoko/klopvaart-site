@@ -10,5 +10,8 @@
       "margin": true
     }
   },
+  "example": {
+    "icon": "mapMarker"
+  },
   "editorScript": "file:./index.js"
 }

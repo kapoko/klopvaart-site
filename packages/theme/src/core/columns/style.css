@@ -22,7 +22,12 @@
   }
   @variant 3xl {
     max-width: calc(var(--breakpoint-3xl) / 2 - var(--container-padding) * 3);
-    margin-left: calc(50% - var(--breakpoint-3xl) / 2);
+    margin-left: calc(
+      50% -
+      var(--breakpoint-3xl) /
+      2 -
+      var(--container-padding)
+    );
   }
 }
 

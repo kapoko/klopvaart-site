@@ -1,0 +1,5 @@
+.wp-block-heading[class~="big-page-title"] {
+  border-color: var(--wp--preset--color--red);
+  padding-left: calc(50% - var(--wp--style--global--content-size) / 2 - .5rem);
+  border-left-width: .5rem;
+}

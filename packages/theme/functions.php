@@ -108,7 +108,7 @@ array_map(
             wp_die(sprintf("Error locating <code>%s</code>.", $file));
         }
     },
-    ["columns", "navigation", "button", "spacer"]
+    ["columns", "navigation", "button", "spacer", "heading"]
 );
 
 /**
@@ -140,7 +140,3 @@ if (!function_exists("asset")) {
         return apply_filters("getAssetUrl", $assetName);
     }
 }
-
-add_shortcode('year', function () {
-    return date('Y');
-});

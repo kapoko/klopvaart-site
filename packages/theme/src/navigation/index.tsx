@@ -46,7 +46,6 @@ registerBlockType(metadata.name, {
                 <div className="hidden md:block">
                     <InnerBlocks
                         allowedBlocks={metadata.allowedBlocks}
-                        templateLock={"contentOnly"}
                         template={TEMPLATE}
                     />
                 </div>

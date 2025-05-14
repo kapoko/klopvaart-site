@@ -56,7 +56,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"textColor":"muted","fontSize":"medium"} -->
-<p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)">© Alle rechten voorbehouden, 2025</p>
+<p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)">© Alle rechten voorbehouden, <?php echo date('Y') ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:spacer {"height":"120px","hideOnMobile":true} -->
