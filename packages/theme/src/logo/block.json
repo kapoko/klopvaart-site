@@ -6,7 +6,7 @@
   "textdomain": "klopvaart",
   "category": "klopvaart",
   "supports": {
-    "customClassName": false
+    "customClassName": true
   },
   "example": {
     "color": "#000000",

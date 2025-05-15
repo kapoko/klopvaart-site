@@ -16,8 +16,8 @@ $defaults = [
 ];
 
 $classes = [
-  "small" =>  "w-20 md:w-25 xl:w-30",
-  "big" => "w-30 md:w-40 xl:w-50"
+  "small" =>  "w-24 md:w-28 xl:w-30",
+  "big" => "w-35 md:w-40 xl:w-50"
 ];
 
 ["color" => $color, "version" => $version, "size" => $size] = array_merge($defaults, $attributes);

@@ -3,29 +3,47 @@
 .wp-block-columns[class~="has-restricted-first-column"] > div:first-child {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+  max-width: var(--breakpoint-sm);
 
+  @variant sm {
+    max-width: var(--breakpoint-sm);
+    padding-left: max(
+      calc(50% - var(--breakpoint-sm) / 2 + var(--container-padding)),
+      var(--container-padding)
+    );
+  }
   @variant md {
     max-width: calc(var(--breakpoint-md) / 2 - var(--container-padding) * 3);
-    margin-left: calc(50% - var(--breakpoint-md) / 2);
+    padding-left: max(
+      calc(50% - var(--breakpoint-md) / 2 + var(--container-padding)),
+      var(--container-padding)
+    );
   }
   @variant lg {
     max-width: calc(var(--breakpoint-lg) / 2 - var(--container-padding) * 3);
-    margin-left: calc(50% - var(--breakpoint-lg) / 2);
+    padding-left: max(
+      calc(50% - var(--breakpoint-lg) / 2 + var(--container-padding)),
+      var(--container-padding)
+    );
   }
   @variant xl {
     max-width: calc(var(--breakpoint-xl) / 2 - var(--container-padding) * 3);
-    margin-left: calc(50% - var(--breakpoint-xl) / 2);
+    padding-left: max(
+      calc(50% - var(--breakpoint-xl) / 2 + var(--container-padding)),
+      var(--container-padding)
+    );
   }
   @variant 2xl {
     max-width: calc(var(--breakpoint-2xl) / 2 - var(--container-padding) * 3);
-    margin-left: calc(50% - var(--breakpoint-2xl) / 2);
+    padding-left: max(
+      calc(50% - var(--breakpoint-2xl) / 2 + var(--container-padding)),
+      var(--container-padding)
+    );
   }
   @variant 3xl {
     max-width: calc(var(--breakpoint-3xl) / 2 - var(--container-padding) * 3);
-    margin-left: calc(
-      50% -
-      var(--breakpoint-3xl) /
-      2 -
+    padding-left: max(
+      calc(50% - var(--breakpoint-3xl) / 2 + var(--container-padding)),
       var(--container-padding)
     );
   }

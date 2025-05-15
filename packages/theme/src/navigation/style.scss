@@ -7,7 +7,7 @@
 
 @import "~delicious-hamburgers/scss/animations/chop";
 
-.current-menu-item {
+.current-menu-item > a {
   font-weight: bold;
 }
 
@@ -33,7 +33,7 @@ body::before {
        padding: .5rem 0;
      }
 
-    .current-menu-item span::before {
+    .current-menu-item > a > span::before {
       content: "→";
       position: inline-block;
       margin-right: 1rem;
@@ -47,4 +47,37 @@ body::before {
 
 .wp-block-klopvaart-navigation img {
   filter: invert(1);
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { 
+  border: 0;
+  background: none;
+  border-radius: .5rem;
+
+  &::before {
+    content: "";
+    width: 2rem;
+    margin-left: 1rem;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid #fff;
+    //position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
+
+  li {
+    background: #fff;
+    padding: .5rem;
+  }
+
+  li:first-child {
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  li:last-child {
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+  }
 }

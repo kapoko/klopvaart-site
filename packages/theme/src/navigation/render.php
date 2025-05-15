@@ -23,8 +23,12 @@ wp_interactivity_state(
         </div>
     </button>
 
-    <div class="lg:block -translate-x-full lg:translate-x-0 group-[.menu-open]:translate-x-0 transition-transform motion-reduce:transition-none lg:transition-none ease-in-out duration-500 w-[calc(100%-2rem-50px)] max-w-lg lg:max-w-none h-vh h-svh text-2xl lg:w-auto lg:h-auto bg-(--wp--preset--color--contrast) lg:bg-transparent fixed lg:static top-0 left-0 px-8 lg:p-0 overflow-hidden lg:overflow-auto">
-        <img class="py-6 w-20 lg:hidden" src="<?= get_stylesheet_directory_uri() . "/assets/images/logo.svg"; ?>" alt="Klopvaart"/>
+    <div class="lg:block -translate-x-full lg:translate-x-0 group-[.menu-open]:translate-x-0 transition-transform motion-reduce:transition-none lg:transition-none ease-in-out duration-500 w-[calc(100%-2rem-50px)] max-w-lg lg:max-w-none h-vh h-svh text-2xl lg:w-full lg:h-auto bg-(--wp--preset--color--contrast) lg:bg-transparent fixed lg:static top-0 left-0 px-8 lg:p-0">
+
+        <div class="py-6 lg:hidden">
+            <?= do_blocks('<!-- wp:klopvaart/logo {"version":"withText", "size":"big", "color": "#ffffff"} /-->'); ?>
+        </div>
+
         <?= $content; ?>
     </div>
 </div>
