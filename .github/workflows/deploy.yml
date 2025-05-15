@@ -40,7 +40,7 @@ jobs:
         proxy_password: ${{ secrets.SSH_PROXY_PASSWORD }}
         command: |
           PATH="/home/${{ secrets.SSH_USERNAME }}/bin/:$PATH"
-          cd domains/beta.klopvaart.nl/public_html && \
+          cd domains/klopvaart.nl/public_html && \
           git checkout main
           if ! git pull; then
             exit 1
@@ -53,4 +53,4 @@ jobs:
           wp --path=web/wp rewrite flush
           wp i18n make-json packages/theme/languages web/wp-content/languages/themes --no-purge
         source: packages/theme/build
-        target: domains/beta.klopvaart.nl/public_html/packages/theme
+        target: domains/klopvaart.nl/public_html/packages/theme
