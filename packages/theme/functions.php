@@ -140,3 +140,25 @@ if (!function_exists("asset")) {
         return apply_filters("getAssetUrl", $assetName);
     }
 }
+
+add_action('wp_head', function () {
+    $title = get_bloginfo("name");
+    $description = get_bloginfo("description");
+    $language = get_bloginfo("language");
+    $url = get_bloginfo("url");
+    $image = get_stylesheet_directory_uri() . "/assets/images/opengraph.jpg";
+
+    $meta = <<<HTML
+        <meta name="description" content="{$description}">
+        <meta name="keywords" content="Klopvaart, Centraal Wonen, Woongroep">
+        <meta property="og:title" content="{$title}">
+        <meta property="og:description" content="{$description}">
+        <meta property="og:site_name" content="{$title}">
+        <meta property="og:locale" content="{$language}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{$url}">
+        <meta property="og:image" content="{$image}">
+    HTML;
+
+    echo $meta . "\n";
+});
