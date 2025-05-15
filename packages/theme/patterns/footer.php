@@ -55,9 +55,20 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
-<!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"textColor":"muted","fontSize":"medium"} -->
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"textColor":"muted","fontSize":"medium"} -->
 <p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)">© Alle rechten voorbehouden, <?php echo date('Y') ?></p>
 <!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}}},"textColor":"muted"} -->
+<p class="has-muted-color has-text-color has-link-color">•</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|muted"}}},"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"textColor":"muted","fontSize":"medium"} -->
+<p class="has-text-align-left has-muted-color has-text-color has-link-color has-medium-font-size" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20)"><a href="https://github.com/kapoko/klopvaart-site" target="_blank" rel="noreferrer noopener">&lt;/></a></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
 
 <!-- wp:spacer {"height":"120px","hideOnMobile":true} -->
 <div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
