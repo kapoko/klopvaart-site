@@ -31,7 +31,6 @@
     "roots/wordpress-core-installer": "^1.0",
     "symfony/dotenv": "^7.1",
     "symfony/flex": "^2.4",
-    "wpackagist-plugin/gutenberg": "^20.8",
     "wpackagist-theme/twentytwentyfive": "^1.2"
   },
   "extra": {

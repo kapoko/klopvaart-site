@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39dda3ecadb145725d08d592621956d7",
+    "content-hash": "99f82d3d31f86382b19d719c1ca159c4",
     "packages": [
         {
             "name": "composer/installers",
@@ -154,7 +154,7 @@
         },
         {
             "name": "klopvaart/theme",
-            "version": "dev-dev",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./packages/theme",
@@ -503,24 +503,6 @@
                 }
             ],
             "time": "2025-05-10T14:05:03+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/gutenberg",
-            "version": "20.8.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/20.8.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.20.8.0.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/gutenberg/"
         },
         {
             "name": "wpackagist-theme/twentytwentyfive",
