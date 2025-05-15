@@ -10,7 +10,7 @@ wp_interactivity_state(
 );
 ?>
 
-<div <?= get_block_wrapper_attributes(["class" => "group z-50 fixed lg:static w-full max-w-full lg:w-auto lg:container p-4 lg:px-auto lg:py-10 justify-end lg:justify-start flex items-center flex-col lg:flex-row text-white lg:text-(--wp--preset--color--contrast)"]) ?>
+<div <?= get_block_wrapper_attributes(["class" => "group fixed lg:relative z-10 w-full max-w-full lg:w-auto lg:container p-4 lg:px-auto lg:py-10 justify-end lg:justify-start flex items-center flex-col lg:flex-row text-white lg:text-(--wp--preset--color--contrast)"]) ?>
     data-wp-interactive="navigation"
     data-wp-class--menu-open="state.menuOpen"
     data-wp-watch="callbacks.menuChanged"

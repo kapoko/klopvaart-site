@@ -61,8 +61,29 @@ div.circle {
   mix-blend-mode: exclusion;
   top: 50vh;
   right: 15vw;
-  width: 35vh;
-  height: 35vh;
+  width: 50vw;
+  height: 50vw;
   border-radius: 50%;
   background-color: #ca0000;
+  pointer-events: none;
+
+  @variant lg {
+    width: 35vh;
+    height: 35vh;
+  }
+  @variant xl {
+    width: 45vh;
+    height: 45vh;
+  }
+  @variant 3xl {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+  }
 }

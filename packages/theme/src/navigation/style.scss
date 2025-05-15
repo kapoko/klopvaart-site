@@ -48,7 +48,10 @@ body::before {
 .wp-block-klopvaart-navigation img {
   filter: invert(1);
 }
-
+.wp-block-navigation {
+  position: relative;
+  z-index: 1001;
+}
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { 
   border: 0;
   background: none;

@@ -3,6 +3,7 @@
 .wp-block-heading[class~="big-page-title"] {
   border-color: var(--wp--preset--color--red);
   padding-left: var(--container-padding);
+  margin-bottom: .5em;
 
   @variant sm {
     border-left-width: .5rem;
