@@ -24,6 +24,10 @@
 
 @source inline("hidden,block,h-full");
 
+body {
+  overflow-x: hidden;
+}
+
 .wp-site-blocks
   .is-layout-constrained
   > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
