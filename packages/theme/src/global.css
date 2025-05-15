@@ -24,10 +24,6 @@
 
 @source inline("hidden,block,h-full");
 
-body {
-  overflow-x: hidden;
-}
-
 .wp-site-blocks
   .is-layout-constrained
   > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
@@ -60,7 +56,7 @@ body {
 }
 
 div.circle {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
   mix-blend-mode: exclusion;
   top: 50vh;
