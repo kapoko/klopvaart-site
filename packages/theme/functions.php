@@ -1,30 +1,19 @@
 <?php
 
-/**
- * Loads Knock Knock template files located in the app/ folder
- */
-
-array_map(
-    function ($file) {
-        $file = "./app/{$file}.php";
-        if (!locate_template($file, true, true)) {
-            wp_die(sprintf("Error locating <code>%s</code>.", $file));
-        }
-    },
-    ["setup"]
-);
-
 add_filter('body_class', function ($classes) {
     return array_merge($classes, ["transition-colors", "duration-500"]);
 });
 
 /**
- * Allowed blocks
+ * Allowed blocks, for now allow everything
  */
-//add_filter("allowed_block_types_all", function ($allowed_blocks) {
-//    return ["core/paragraph", "core/heading", "klopvaart/*"];
-//});
+add_filter("allowed_block_types_all", function ($allowed_blocks) {
+    return $allowed_blocks;
+});
 
+/**
+ * Add block category
+ */
 add_action(
     "block_categories_all",
     function ($categories) {
@@ -32,7 +21,7 @@ add_action(
             $categories,
             [[
                "slug" => "klopvaart",
-               "title" => "Klopvaart Blocks",
+               "title" => __('Klopvaart Blocks', 'klopvaart'),
             ]]
         );
     },
@@ -124,6 +113,9 @@ add_action(
     }
 );
 
+/**
+ * Internationalization
+ */
 add_action(
     "after_setup_theme",
     function () {
@@ -132,15 +124,8 @@ add_action(
 );
 
 /**
- * Global functions
+ * Add meta tags
  */
-if (!function_exists("asset")) {
-    function asset($assetName)
-    {
-        return apply_filters("getAssetUrl", $assetName);
-    }
-}
-
 add_action('wp_head', function () {
     $title = get_bloginfo("name");
     $description = get_bloginfo("description");
