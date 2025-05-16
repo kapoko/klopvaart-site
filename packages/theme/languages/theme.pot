@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-13T14:17:17+00:00\n"
+"POT-Creation-Date: 2025-05-16T20:47:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: klopvaart\n"
 
 #. Theme Name of the theme
 #: style.css
-#: functions.php:46
+#: functions.php:35
 msgid "Klopvaart"
 msgstr ""
 
@@ -30,9 +30,13 @@ msgstr ""
 msgid "Kasper Koman"
 msgstr ""
 
+#: functions.php:24
+msgid "Klopvaart Blocks"
+msgstr ""
+
 #: patterns/footer.php
 msgctxt "Pattern title"
-msgid "Footer Wrap"
+msgid "Footer"
 msgstr ""
 
 #: patterns/header.php
@@ -40,62 +44,85 @@ msgctxt "Pattern title"
 msgid "Header"
 msgstr ""
 
-#: build/core.js:1
+#: build/core.js:101
+#: build/core.js:239
+#: build/core.js:388
 msgid "Klopvaart Settings"
 msgstr ""
 
-#: build/core.js:1
+#: build/core.js:105
 msgid "Restrict left column to content size"
 msgstr ""
 
-#: build/core.js:1
-msgid "Make column sticky"
-msgstr ""
-
-#: build/core.js:1
+#: build/core.js:154
 msgid "Blue Group"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/core.js:243
+msgid "Big page title"
+msgstr ""
+
+#: build/core.js:392
+msgid "Hidden on mobile"
+msgstr ""
+
+#: build/icon/index.js:350
+#: build/logo/index.js:406
 msgid "Color"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/icon/index.js:356
+msgid "Icon color"
+msgstr ""
+
+#: build/icon/index.js:359
+msgid "Icon"
+msgstr ""
+
+#: build/logo/index.js:412
 msgid "Logo color"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:415
 msgid "Settings"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:417
 msgid "Size"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:426
 msgid "Small"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:429
 msgid "Big"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:432
 msgid "Logo version"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:435
 msgid "Logo"
 msgstr ""
 
-#: build/logo/index.js:1
+#: build/logo/index.js:438
 msgid "Logo With Text"
 msgstr ""
 
-#: build/footer/block.json
-#: src/footer/block.json
+#: build/logo/index.js:446
+msgid "Enable link"
+msgstr ""
+
+#: build/logo/index.js:447
+msgid "Makes the logo clickable, linking to the home page"
+msgstr ""
+
+#: build/icon/block.json
+#: src/icon/block.json
 msgctxt "block title"
-msgid "Footer Joe"
+msgid "Klopvaart Icon"
 msgstr ""
 
 #: build/logo/block.json
@@ -134,6 +161,11 @@ msgstr ""
 
 #: theme.json
 msgctxt "Color name"
+msgid "Muted"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
 msgid "White"
 msgstr ""
 
@@ -165,6 +197,11 @@ msgstr ""
 #: theme.json
 msgctxt "Font size name"
 msgid "Extra Extra Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Extra Extra Extra Large"
 msgstr ""
 
 #: theme.json
