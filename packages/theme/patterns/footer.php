@@ -15,7 +15,7 @@
 
 <!-- wp:columns {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
 <div class="wp-block-columns" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:column {"layout":{"type":"default"}} -->
-<div class="wp-block-column"><!-- wp:klopvaart/logo {"color":"#FFFFFF","version":"withText"} /-->
+<div class="wp-block-column"><!-- wp:klopvaart/logo {"color":"#FFFFFF","version":"withText","linkEnabled":true} /-->
 
 <!-- wp:spacer {"height":"32px"} -->
 <div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>

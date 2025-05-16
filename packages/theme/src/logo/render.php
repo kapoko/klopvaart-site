@@ -12,7 +12,8 @@ $logo = [
 $defaults = [
     "color" => "#000000",
     "size" => "big",
-    "version" => "image"
+    "version" => "image",
+    "linkEnabled" => false
 ];
 
 $classes = [
@@ -20,9 +21,16 @@ $classes = [
   "big" => "w-35 md:w-40 xl:w-50"
 ];
 
-["color" => $color, "version" => $version, "size" => $size] = array_merge($defaults, $attributes);
-?>
+["color" => $color, "version" => $version, "size" => $size, "linkEnabled" => $linkEnabled] = array_merge($defaults, $attributes);
 
-<div <?= get_block_wrapper_attributes(["class" => $classes[$size]]) ?>>
+$wrapperAttributes = get_block_wrapper_attributes(["class" => $classes[$size] . " block z-5 relative"]);
+
+if ($linkEnabled) : ?>
+<a href="<?php bloginfo('url'); ?>" <?= $wrapperAttributes ?>>
+    <?php printf($logo[$version], $color); ?>
+</a>
+<?php else : ?>
+<div <?= $wrapperAttributes ?>>
     <?php printf($logo[$version], $color); ?>
 </div>
+<?php endif; ?>
