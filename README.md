@@ -1,17 +1,17 @@
 # klopvaart-site
 
-Wordpress website for Klopvaart, a cohousing association 
+Wordpress website for Klopvaart, a cohousing association.
 
-## Requirements 
+## Requirements
 
 - Node v23 or higher
 - Docker
 
 ## Development
 
-Copy `.env.example` to `.env` and fill in the variables. Run `composer install`.
+Copy `.env.example` to `.env` and fill in the variables. Run `composer install` and `npm install`.
 
-Run:
+To start development:
 
 ```
 docker compose up

@@ -135,7 +135,7 @@ add_action('wp_head', function () {
 
     $meta = <<<HTML
         <meta name="description" content="{$description}">
-        <meta name="keywords" content="Klopvaart, Centraal Wonen, Woongroep">
+        <meta name="keywords" content="klopvaart, centraal wonen, woongroep, vereniging">
         <meta property="og:title" content="{$title}">
         <meta property="og:description" content="{$description}">
         <meta property="og:site_name" content="{$title}">
