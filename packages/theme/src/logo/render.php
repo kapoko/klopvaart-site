@@ -26,7 +26,7 @@ $classes = [
 $wrapperAttributes = get_block_wrapper_attributes(["class" => $classes[$size] . " block z-5 relative"]);
 
 if ($linkEnabled) : ?>
-<a href="<?php bloginfo('url'); ?>" <?= $wrapperAttributes ?>>
+<a href="<?php bloginfo('url'); ?>" <?= $wrapperAttributes ?> title="<?= __("Back to home", "klopvaart"); ?>">
     <?php printf($logo[$version], $color); ?>
 </a>
 <?php else : ?>

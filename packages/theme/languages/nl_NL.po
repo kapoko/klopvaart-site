@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Klopvaart 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme\n"
-"POT-Creation-Date: 2025-05-16T20:47:30+00:00\n"
-"PO-Revision-Date: 2025-05-16 22:51+0200\n"
+"POT-Creation-Date: 2025-05-19T14:46:05+00:00\n"
+"PO-Revision-Date: 2025-05-19 16:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Domain: klopvaart\n"
 
 #. Theme Name of the theme
@@ -29,6 +29,10 @@ msgstr "Handgemaakt voor de website van de Klopvaart"
 #: style.css
 msgid "Kasper Koman"
 msgstr ""
+
+#: build/logo/render.php:29 src/logo/render.php:29
+msgid "Back to home"
+msgstr "Terug naar home"
 
 #: functions.php:24
 msgid "Klopvaart Blocks"
@@ -115,6 +119,11 @@ msgstr "Link maken"
 #: build/logo/index.js:447
 msgid "Makes the logo clickable, linking to the home page"
 msgstr "Maakt het logo klikbaar, linkend naar home"
+
+#: build/footer/block.json
+msgctxt "block title"
+msgid "Footer Joe"
+msgstr ""
 
 #: build/icon/block.json src/icon/block.json
 msgctxt "block title"
