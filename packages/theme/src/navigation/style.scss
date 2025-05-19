@@ -7,6 +7,8 @@
 
 @import "~delicious-hamburgers/scss/animations/chop";
 
+@reference "../global.css";
+
 .current-menu-item > a {
   font-weight: bold;
 }
@@ -18,14 +20,16 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: background-color 250ms linear;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition:opacity 250ms linear;
   pointer-events: none;
+  z-index:9;
 }
 
 @media (max-width: 1023px) {
   body.menu-open::before {
-    background: rgba(0, 0, 0, 0.3);
+    opacity: 1
   }
 
   .wp-block-klopvaart-navigation {
@@ -48,9 +52,11 @@ body::before {
 .wp-block-klopvaart-navigation img {
   filter: invert(1);
 }
+
 .wp-block-navigation {
   position: relative;
 }
+
 .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { 
   border: 0;
   background: none;

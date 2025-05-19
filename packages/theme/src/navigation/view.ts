@@ -1,8 +1,13 @@
-import { store } from "@wordpress/interactivity";
+import { store, getElement } from "@wordpress/interactivity";
 
 type State = {
   menuOpen: boolean;
+  refs: {
+    box: HTMLElement | undefined;
+  };
 };
+
+let handleOutsideClick: EventListener;
 
 const { state } = store("navigation", {
   state: {} as State,
@@ -13,9 +18,23 @@ const { state } = store("navigation", {
   },
   callbacks: {
     menuChanged: () => {
-      state.menuOpen
-        ? document.body.classList.add("menu-open")
-        : document.body.classList.remove("menu-open");
+      const { ref } = getElement();
+
+      if (!handleOutsideClick) {
+        handleOutsideClick = (e: Event) => {
+          if (ref && e.target instanceof Node && !ref.contains(e.target)) {
+            state.menuOpen = false;
+          }
+        };
+      }
+
+      if (state.menuOpen) {
+        document.body.classList.add("menu-open");
+        document.addEventListener("click", handleOutsideClick);
+      } else {
+        document.body.classList.remove("menu-open");
+        document.removeEventListener("click", handleOutsideClick);
+      }
     },
   },
 });
