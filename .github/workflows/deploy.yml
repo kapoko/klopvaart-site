@@ -42,7 +42,7 @@ jobs:
           PATH="/home/${{ secrets.SSH_USERNAME }}/bin/:$PATH"
           cd domains/klopvaart.nl/public_html && \
           git checkout main
-          if ! git pull; then
+          if ! git fetch origin && git reset --hard origin/main; then
             exit 1
           fi
           composer install && \ 
