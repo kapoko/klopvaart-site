@@ -97,7 +97,7 @@ array_map(
             wp_die(sprintf("Error locating <code>%s</code>.", $file));
         }
     },
-    ["columns", "navigation", "button", "spacer", "heading"]
+    ["columns", "navigation", "button", "spacer", "heading", "image"]
 );
 
 /**
