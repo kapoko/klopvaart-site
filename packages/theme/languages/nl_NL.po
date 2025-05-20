@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Klopvaart 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme\n"
-"POT-Creation-Date: 2025-05-19T14:46:05+00:00\n"
-"PO-Revision-Date: 2025-05-19 16:47+0200\n"
+"POT-Creation-Date: 2025-05-20T14:29:40+00:00\n"
+"PO-Revision-Date: 2025-05-20 16:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -33,6 +33,10 @@ msgstr ""
 #: build/logo/render.php:29 src/logo/render.php:29
 msgid "Back to home"
 msgstr "Terug naar home"
+
+#: build/navigation/render.php:17 src/navigation/render.php:17
+msgid "Open the menu"
+msgstr "Open het menu"
 
 #: functions.php:24
 msgid "Klopvaart Blocks"

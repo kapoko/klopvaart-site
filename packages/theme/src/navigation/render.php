@@ -14,8 +14,8 @@ wp_interactivity_state(
     data-wp-interactive="navigation"
     data-wp-class--menu-open="state.menuOpen"
 >
-    <button type="button" class="hamburger hamburger--chop lg:hidden! ms-auto" data-wp-on--click="actions.menuToggle" data-wp-class--active="state.menuOpen">
-        <div class="inner">
+    <button type="button" class="hamburger hamburger--chop lg:hidden! ms-auto" data-wp-on--click="actions.menuToggle" data-wp-class--active="state.menuOpen" aria-label="<?= __("Open the menu", "klopvaart") ?>">
+        <div class="inner" aria-hidden="true">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>

@@ -51,6 +51,7 @@ window.addEventListener("load", () => {
   const scrollElements = document.querySelectorAll<HTMLElement>(
     "[data-scrollparallax]",
   );
+
   for (const el of [...scrollElements]) {
     const scrollSpeed = Number.parseFloat(
       el.getAttribute("data-scrollparallax") as string,
