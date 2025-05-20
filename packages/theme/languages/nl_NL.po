@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Klopvaart 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme\n"
-"POT-Creation-Date: 2025-05-20T14:29:40+00:00\n"
-"PO-Revision-Date: 2025-05-20 16:30+0200\n"
+"POT-Creation-Date: 2025-05-20T14:34:28+00:00\n"
+"PO-Revision-Date: 2025-05-20 16:34+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -52,7 +52,7 @@ msgctxt "Pattern title"
 msgid "Header"
 msgstr ""
 
-#: build/core.js:101 build/core.js:239 build/core.js:388
+#: build/core.js:101 build/core.js:199 build/core.js:346
 msgid "Klopvaart Settings"
 msgstr "Klopvaart Instellingen"
 
@@ -60,15 +60,11 @@ msgstr "Klopvaart Instellingen"
 msgid "Restrict left column to content size"
 msgstr "Linker kolom uitlijnen op content breedte"
 
-#: build/core.js:154
-msgid "Blue Group"
-msgstr ""
-
-#: build/core.js:243
+#: build/core.js:203
 msgid "Big page title"
 msgstr "Grote pagina titel"
 
-#: build/core.js:392
+#: build/core.js:350
 msgid "Hidden on mobile"
 msgstr "Verberg op telefoon"
 

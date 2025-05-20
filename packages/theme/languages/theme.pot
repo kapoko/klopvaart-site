@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-05-20T14:29:40+00:00\n"
+"POT-Creation-Date: 2025-05-20T14:34:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: klopvaart\n"
@@ -55,8 +55,8 @@ msgid "Header"
 msgstr ""
 
 #: build/core.js:101
-#: build/core.js:239
-#: build/core.js:388
+#: build/core.js:199
+#: build/core.js:346
 msgid "Klopvaart Settings"
 msgstr ""
 
@@ -64,15 +64,11 @@ msgstr ""
 msgid "Restrict left column to content size"
 msgstr ""
 
-#: build/core.js:154
-msgid "Blue Group"
-msgstr ""
-
-#: build/core.js:243
+#: build/core.js:203
 msgid "Big page title"
 msgstr ""
 
-#: build/core.js:392
+#: build/core.js:350
 msgid "Hidden on mobile"
 msgstr ""
 
