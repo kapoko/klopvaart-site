@@ -37,7 +37,7 @@ jobs:
         proxy_host: ${{ secrets.SSH_PROXY_HOST }}
         proxy_port: ${{ secrets.SSH_PROXY_PORT }}
         proxy_username: ${{ secrets.SSH_PROXY_USERNAME }}
-        proxy_password: ${{ secrets.SSH_PROXY_PASSWORD }}
+        proxy_private_key: ${{ secrets.SSH_PROXY_PRIVATE_KEY }}
         command: |
           PATH="/home/${{ secrets.SSH_USERNAME }}/bin/:$PATH"
           cd domains/klopvaart.nl/public_html && \
