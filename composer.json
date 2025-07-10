@@ -28,7 +28,6 @@
     "composer/installers": "^2.3",
     "klopvaart/theme": "@dev",
     "roots/wordpress": "^6.8",
-    "roots/wordpress-core-installer": "^1.100",
     "symfony/dotenv": "^7.1",
     "symfony/flex": "^2.4",
     "wpackagist-theme/twentytwentyfive": "^1.2"
@@ -47,9 +46,9 @@
       "php": "8.3"
     },
     "allow-plugins": {
+      "composer/installers": true,
       "roots/wordpress-core-installer": true,
-      "symfony/flex": true,
-      "composer/installers": true
+      "symfony/flex": true
     }
   }
 }
