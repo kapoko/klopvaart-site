@@ -9,6 +9,7 @@ on:
 jobs:
   build:
 
+    name: Build
     runs-on: ubuntu-latest
 
     strategy:
@@ -27,6 +28,25 @@ jobs:
       run: |
         npm ci
         npm run build
+
+    - name: Upload build files
+      uses: actions/upload-artifact@v5
+      with:
+        name: production-files
+        path: ./packages/theme/build
+
+  deploy:
+
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v6
+      with:
+        name: production-files
+        path: ./build
 
     - name: Run git pull on remote, install dependencies and copy artifacts
       uses: kapoko/scp-action@v0
@@ -52,5 +72,5 @@ jobs:
           wp --path=web/wp language theme --all update && \
           wp --path=web/wp rewrite flush
           wp i18n make-json packages/theme/languages web/wp-content/languages/themes --no-purge
-        source: packages/theme/build
+        source: build
         target: domains/klopvaart.nl/public_html/packages/theme
