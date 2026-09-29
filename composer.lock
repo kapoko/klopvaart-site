@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a11e0940c048727e69a86eceed5dc366",
+    "content-hash": "db4547e3ae5a365702c4e484b81470c5",
     "packages": [
         {
             "name": "composer/installers",
@@ -179,7 +179,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.9.9",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -289,23 +289,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.9.9",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.9.9"
+                "reference": "7.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.w.org/release/wordpress-6.9.9-no-content.zip",
-                "reference": "6.9.9",
-                "shasum": "37aa034b83d8064f627fb6661decdbd7b6993d49"
+                "url": "https://downloads.wordpress.org/release/wordpress-7.1.2-no-content.zip",
+                "reference": "7.1.2",
+                "shasum": "52c0250854a52621dc024651b63d1e088287ee16"
             },
             "require": {
-                "php": ">= 7.2.24"
+                "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "6.9.9"
+                "wordpress/core-implementation": "7.1.2"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -356,7 +356,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-09-22T14:07:20+00:00"
+            "time": "2026-09-22T13:36:10+00:00"
         },
         {
             "name": "symfony/dotenv",
@@ -511,15 +511,15 @@
         },
         {
             "name": "wp-plugin/gutenberg",
-            "version": "22.9.0",
+            "version": "24.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gutenberg/",
-                "reference": "tags/22.9.0"
+                "reference": "tags/24.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gutenberg.22.9.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.24.0.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
