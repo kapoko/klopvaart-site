@@ -11,9 +11,9 @@
   ],
   "repositories": [
     {
+      "name": "wp-packages",
       "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "url": "https://repo.wp-packages.org"
     },
     {
       "type": "path",
@@ -30,8 +30,8 @@
     "roots/wordpress": "^6.8",
     "symfony/dotenv": "^7.1",
     "symfony/flex": "^2.4",
-    "wpackagist-plugin/gutenberg": "^22.2",
-    "wpackagist-theme/twentytwentyfive": "^1.2"
+    "wp-plugin/gutenberg": "^22.2",
+    "wp-theme/twentytwentyfive": "^1.2"
   },
   "extra": {
     "wordpress-install-dir": "web/wp",
